@@ -1,49 +1,70 @@
 ---
 permalink: /
-title: "Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites"
+#title: "Host"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this template](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads!
+# About Me
 
-A data-driven personal website
-======
-Like many other Jekyll-based GitHub Pages templates, Academic Pages makes you separate the website's content from its form. The content & metadata of your website are in structured markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
+Hi! I am **Yuyang Gong**. Welcome to my personal homepage!
+I am a third-year student in the School of Information Management at **Wuhan University**.  
+Currently, I work in the [**Knowledge Mining and Information Retrieval Institute**](http://39.103.203.133/), Wuhan University, supervised by [**Dr. Jiawei Liu**](https://scholar.google.cz/citations?hl=zh-CN&user=xUpTKD8AAAAJ) and [**Prof.Wei Lu**](https://scholar.google.cz/citations?hl=zh-CN&user=mRdnCQ4AAAAJ).  
 
-Many of the features of dynamic content management systems (like Wordpress) can be achieved in this fashion, using a fraction of the computational resources and with far less vulnerability to hacking and DDoSing. You can also modify the theme to your heart's content without touching the content of your site. If you get to a point where you've broken something in Jekyll/HTML/CSS beyond repair, your markdown files describing your talks, publications, etc. are safe. You can rollback the changes or even delete the repository and start over - just be sure to save the markdown files! Finally, you can also write scripts that process the structured data on the site, such as [this one](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb) that analyzes metadata in pages about talks to display [a map of every location you've given a talk](https://academicpages.github.io/talkmap.html).
+I am deeply fascinated by the field of **Trustworthy Artificial Intelligence (AI)**. The importance of building robust, fair, and reliable AI systems inspires me to continuously learn and explore innovative solutions. I aspire to deepen my understanding and contribute to advancing this critical area through dedicated research and collaboration.
 
-Getting started
-======
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this template](https://github.com/academicpages/academicpages.github.io) by clicking the "Use this template" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](http://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
+Now, I am actively seeking **summer internship opportunities** in 2025 and preparing to apply for a **PhD program starting in Fall 2026**!
 
-Site-wide configuration
-------
-The main configuration file for the site is in the base directory in [_config.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_config.yml), which defines the content in the sidebars and other site-wide features. You will need to replace the default variables with ones about yourself and your site's github repository. The configuration file for the top menu is in [_data/navigation.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_data/navigation.yml). For example, if you don't have a portfolio or blog posts, you can remove those items from that navigation.yml file to remove them from the header. 
 
-Create content & metadata
-------
-For site content, there is one markdown file for each type of content, which are stored in directories like _publications, _talks, _posts, _teaching, or _pages. For example, each talk is a markdown file in the [_talks directory](https://github.com/academicpages/academicpages.github.io/tree/master/_talks). At the top of each markdown file is structured data in YAML about the talk, which the theme will parse to do lots of cool stuff. The same structured data about a talk is used to generate the list of talks on the [Talks page](https://academicpages.github.io/talks), each [individual page](https://academicpages.github.io/talks/2012-03-01-talk-1) for specific talks, the talks section for the [CV page](https://academicpages.github.io/cv), and the [map of places you've given a talk](https://academicpages.github.io/talkmap.html) (if you run this [python file](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.py) or [Jupyter notebook](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb), which creates the HTML for the map based on the contents of the _talks directory).
+---
 
-**Markdown generator**
+## Current Research Focuses
 
-The repository includes [a set of Jupyter notebooks](https://github.com/academicpages/academicpages.github.io/tree/master/markdown_generator
-) that converts a CSV containing structured data about talks or presentations into individual markdown files that will be properly formatted for the Academic Pages template. The sample CSVs in that directory are the ones I used to create my own personal website at stuartgeiger.com. My usual workflow is that I keep a spreadsheet of my publications and talks, then run the code in these notebooks to generate the markdown files, then commit and push them to the GitHub repository.
+- Retrieval Augmented Generation (RAG) Security  
+- Robustness of Neural Ranking Models (NRM)  
+- Trustworthy Large Language Models (LLMs)  
 
-How to edit your site's GitHub repository
-------
-Many people use a git client to create files on their local computer and then push them to GitHub's servers. If you are not familiar with git, you can directly edit these configuration and markdown files directly in the github.com interface. Navigate to a file (like [this one](https://github.com/academicpages/academicpages.github.io/blob/master/_talks/2012-03-01-talk-1.md) and click the pencil icon in the top right of the content preview (to the right of the "Raw | Blame | History" buttons). You can delete a file by clicking the trashcan icon to the right of the pencil icon. You can also create new files or upload files by navigating to a directory and clicking the "Create new file" or "Upload files" buttons. 
+---
 
-Example: editing a markdown file for a talk
-![Editing a markdown file for a talk](/images/editing-talk.png)
+## Publications
 
-For more info
-------
-More info about configuring Academic Pages can be found in [the guide](https://academicpages.github.io/markdown/), the [growing wiki](https://github.com/academicpages/academicpages.github.io/wiki), and you can always [ask a question on GitHub](https://github.com/academicpages/academicpages.github.io/discussions). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.
+- **Yuyang Gong**, Zhuo Chen, Miaokun Chen, Fengchang Yu, Wei Lu, Xiaofeng Wang, Xiaozhong Liu, Jiawei Liu.   
+  *Topic-FlipedRAG: Topic-Orientated Adversarial Opinion Manipulation Attacks against RAG models*.  
+  *Usenix Security* (under review).  
+
+- Zhuo Chen, **Yuyang Gong**, Miaokun Chen, Haotan Liu, Qikai Cheng, Fan Zhang, Wei Lu, Xiaozhong Liu, and Jiawei Liu.  
+  [**FlipedRAG: Black-Box Opinion Manipulation Attacks to Retrieval-Augmented Generation of Large Language Models**](https://arxiv.org/abs/2501.02968).  
+  *IEEE S&P* (under review).  
+
+
+## Publication Details
+### Topic-FlipRAG: Topic-Oriented Adversarial Opinion Manipulation Attacks Against RAG Models
+
+### Background: Limitations in Current RAG Security Research
+1. **Narrow Focus on Specific Queries**: Most existing studies target attacks on specific queries, which are not practical for real-world scenarios.
+2. **Limited Focus on Fact-based Questions**: Current research mainly targets fact-based questions, which have limited impact and are easily defendable. There is insufficient exploration of open-ended opinion-based questions, especially for controversial topics.
+3. **Predominance of White-Box Attacks**: The majority of existing research focuses on white-box attack scenarios.
+
+### Attack Method:
+We propose a novel attack by poisoning and modifying a small number of documents (without altering their core content or semantics), enabling them to be retrieved by multiple queries related to the same topic. This modified content is then fed into the large model, significantly influencing the RAG-generated opinions. The attack operates under a **black-box** setting, where the retrieval mechanism and LLM parameters are not accessible, and only the end-to-end inputs and outputs of the RAG system are available.
+
+### Contributions and Innovations:
+1. **Task-Level Innovation**: By poisoning a small set of documents, our attack enables the retrieval of these documents by multiple queries related to the same topic. This allows us to influence the user's perception based on their information needs. Compared to sentiment manipulation, our approach impacts the topic-level opinions more deeply and broadly. Unlike single-query attacks, our method operates on topic groups, making it more efficient, covert, and far-reaching in terms of user influence.
+   
+2. **Proposed Topic-Oriented Black-Box RAG Attack**: We introduce a knowledge-guided, multi-granular topic-oriented approach to black-box RAG attacks, a significant advancement in the manipulation of opinion generation for large language models.
+   
+3. **Experimental Validation**: Extensive experiments demonstrate that Topic-FlipedRAG significantly outperforms baseline methods. We conduct thorough ablation experiments and real-world user experiments to validate the practical threats posed by this attack.
+   
+4. **Ineffectiveness of Current Defense Methods**: Current defense strategies, such as perplexity-based, random masking, and reranking approaches, are ineffective against the Topic-FlipedRAG attack.
+
+---
+
+### FlipedRAG: Black-Box Opinion Manipulation Attacks to Retrieval-Augmented Generation of Large Language Models
+[arXiv: 2501.02968](https://arxiv.org/abs/2501.02968)
+
+### Key Contributions:
+1.	Novel Attack Proposal: We introduce FlipedRAG, a transfer-based opinion manipulation attack against RAG systems in LLMs within a black-box setting. Unlike previous research, which assumes direct access to IR ranking results, our approach simulates the IR model’s behavior by training a surrogate model using RAG‘s end-to-end outputs and then generates adversarial triggers . This method closely mirrors real-world scenarios, where attackers lack direct access to internal ranking mechanisms.
+2. First Exploration of Adversarial Opinion Manipulation in RAG: To the best of our knowledge, this is the first study exploring adversarial opinion manipulation in RAG systems, specifically for open-ended and controversial topics.
+3. Demonstrated Effectiveness: Through automated evaluations and user experiments, we show that our transfer-based attack can significantly manipulate the opinions generated by RAG systems in a desired direction, achieving an average success rate improvement of 16.7%.
