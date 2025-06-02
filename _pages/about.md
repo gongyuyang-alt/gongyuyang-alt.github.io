@@ -27,15 +27,15 @@ Now, I am actively seeking **summer internship opportunities** in 2025 and prepa
 
 ---
 
-## Publications
+## Selected Publications
 
 - **Yuyang Gong**, Zhuo Chen, Miaokun Chen, Fengchang Yu, Wei Lu, Xiaofeng Wang, Xiaozhong Liu, Jiawei Liu.   
-  *Topic-FlipedRAG: Topic-Orientated Adversarial Opinion Manipulation Attacks against RAG models*.  
-  *Usenix Security* (under review)(will be in arxiv soon!).  
+  [**Topic-FlipedRAG: Topic-Orientated Adversarial Opinion Manipulation Attacks against RAG models**](https://arxiv.org/abs/2502.01386).  
+  *Usenix Security* (under review).  
 
 - Zhuo Chen, **Yuyang Gong**, Miaokun Chen, Haotan Liu, Qikai Cheng, Fan Zhang, Wei Lu, Xiaozhong Liu, and Jiawei Liu.  
   [**FlipedRAG: Black-Box Opinion Manipulation Attacks to Retrieval-Augmented Generation of Large Language Models**](https://arxiv.org/abs/2501.02968).  
-  *IEEE S&P* (under review).  
+  *CCS* (under review).  
 
 
 ## Publication Details
@@ -61,7 +61,6 @@ We propose a novel attack by poisoning and modifying a small number of documents
 ---
 
 ### FlipedRAG: Black-Box Opinion Manipulation Attacks to Retrieval-Augmented Generation of Large Language Models
-For more details in [arXiv: 2501.02968](https://arxiv.org/abs/2501.02968)
 
 ### Key Contributions:
 1.	Novel Attack Proposal: We introduce FlipedRAG, a transfer-based opinion manipulation attack against RAG systems in LLMs within a black-box setting. Unlike previous research, which assumes direct access to IR ranking results, our approach simulates the IR model’s behavior by training a surrogate model using RAG‘s end-to-end outputs and then generates adversarial triggers . This method closely mirrors real-world scenarios, where attackers lack direct access to internal ranking mechanisms.

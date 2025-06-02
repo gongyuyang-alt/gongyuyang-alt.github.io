@@ -12,7 +12,7 @@ redirect_from:
 Education
 ======
 * **B.S. in Information Management**, Wuhan University, Wuhan, China (Sep 2022 -- Present)  
-  * GPA: 3.74/4.0  
+  * GPA: 3.73/4.0  
   * IELTS: 7.0  
   * **Major Courses:** Natural Language Processing (4.0), Machine Learning Theory and Practice (4.0), Linear Algebra (4.0), Calculus (4.0), Probability and Statistics (4.0)
 
@@ -25,7 +25,8 @@ Selected Papers
 * **Yuyang Gong**, Zhuo Chen, Miaokun Chen, Fengchang Yu, Wei Lu, Xiaofeng Wang, Xiaozhong Liu, Jiawei Liu. 
 *Topic-FlipRAG: Topic-Orientated Adversarial Opinion Manipulation Attacks against RAG models* (Usenix Security under review).
 * Zhuo Chen, **Yuyang Gong**, Miaokun Chen, Haotan Liu, Qikai Cheng, Fan Zhang, Wei Lu, Xiaozhong Liu, Jiawei Liu.  
-  *FlipedRAG: Black-Box Opinion Manipulation Attacks to Retrieval-Augmented Generation of Large Language Models* (IEEE S&P under review).
+  *FlipedRAG: Black-Box Opinion Manipulation Attacks to Retrieval-Augmented Generation of Large Language Models* (CCS under review).
+
 
 Research Experience
 ======
