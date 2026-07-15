@@ -13,7 +13,7 @@ redirect_from:
 
 ## Biography
 
-Hi! I will soon begin my Ph.D. studies at [{{ profile.affiliation }}]({{ profile.affiliation_url }}) in {{ profile.location }}, where I will be advised by [{{ profile.advisor.name }}]({{ profile.advisor.url }}). I received my B.S. in Information Management from Wuhan University.
+Hi! I will soon begin my Ph.D. studies at [{{ profile.affiliation }}]({{ profile.affiliation_url }}) in {{ profile.location }}, where I will be advised by [{{ profile.advisor.name }}]({{ profile.advisor.url }}). I received my B.S. in Information Management from Wuhan University, where I was advised by [Prof. Wei Lu](https://scholar.google.cz/citations?hl=zh-CN&user=mRdnCQ4AAAAJ) and [Dr. Jiawei Liu](https://scholar.google.cz/citations?hl=zh-CN&user=xUpTKD8AAAAJ).
 
 ## Research
 
