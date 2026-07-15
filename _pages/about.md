@@ -1,68 +1,125 @@
 ---
+layout: home
 permalink: /
-#title: "Host"
-author_profile: true
-redirect_from: 
+title: "Yuyang Gong — Prompt Injection & RAG Security"
+excerpt: "Yuyang Gong studies prompt injection, RAG security, and trustworthy large language models."
+author_profile: false
+redirect_from:
   - /about/
   - /about.html
 ---
 
+{% assign profile = site.data.profile %}
 
-Hi! I am **Yuyang Gong**. Welcome to my personal homepage!
-I am a third-year student in the School of Information Management at **Wuhan University**.  
-Currently, I work in the [**Knowledge Mining and Information Retrieval Institute**](http://39.103.203.133/), Wuhan University, supervised by [**Dr. Jiawei Liu**](https://scholar.google.cz/citations?hl=zh-CN&user=xUpTKD8AAAAJ) and [**Prof.Wei Lu**](https://scholar.google.cz/citations?hl=zh-CN&user=mRdnCQ4AAAAJ).  
+<section class="research-hero" aria-labelledby="hero-title">
+  <div class="research-hero__copy">
+    <p class="eyebrow">{{ profile.eyebrow }}</p>
+    <h1 id="hero-title">{{ profile.headline }}</h1>
+    <p class="research-hero__intro">{{ profile.intro }}</p>
+    <p class="research-hero__affiliation">{{ profile.affiliation_sentence }}</p>
+    <div class="research-hero__actions">
+      <a class="button button--primary" href="/publications/">View publications</a>
+      <a class="button button--quiet" href="mailto:{{ profile.email }}">Start a conversation</a>
+    </div>
+    <p class="availability"><span aria-hidden="true"></span>{{ profile.availability }}</p>
+  </div>
+  <aside class="research-hero__portrait" aria-label="Profile">
+    <div class="portrait-frame">
+      <img src="/images/profile.png" alt="Portrait of Yuyang Gong">
+    </div>
+    <div class="portrait-meta">
+      <strong>{{ profile.name }}</strong>
+      <span>{{ profile.role }}</span>
+      <span>{{ profile.affiliation }}</span>
+    </div>
+  </aside>
+</section>
+<section class="research-question section-block" id="research">
+  <p class="section-kicker">The question behind my work</p>
+  <blockquote>{{ profile.research_question }}</blockquote>
+</section>
 
-I am deeply fascinated by the field of **Trustworthy Artificial Intelligence (AI)**. The importance of building robust, fair, and reliable AI systems inspires me to continuously learn and explore innovative solutions. I aspire to deepen my understanding and contribute to advancing this critical area through dedicated research and collaboration.
+<section class="section-block" aria-labelledby="focus-title">
+  <div class="section-heading">
+    <div>
+      <p class="section-kicker">Research focus</p>
+      <h2 id="focus-title">Securing the boundary between instruction and data</h2>
+    </div>
+    <p>My research connects attacks and defenses: understanding realistic failures first, then using those failures to design stronger alignment.</p>
+  </div>
+  <div class="theme-grid">
+    {% for theme in profile.research_themes %}
+      <article class="theme-card">
+        <span class="theme-card__number">{{ theme.number }}</span>
+        <h3>{{ theme.title }}</h3>
+        <p>{{ theme.text }}</p>
+        <span class="theme-card__paper">{{ theme.paper }}</span>
+      </article>
+    {% endfor %}
+  </div>
+</section>
 
-Now, I am actively seeking **summer internship opportunities** in 2025 and preparing to apply for a **PhD program starting in Fall 2026**!
+<section class="section-block research-arc" aria-labelledby="arc-title">
+  <div class="section-heading section-heading--compact">
+    <div>
+      <p class="section-kicker">Research trajectory</p>
+      <h2 id="arc-title">A coherent path from attacks to defenses</h2>
+    </div>
+  </div>
+  <ol class="arc-list">
+    {% for item in profile.research_arc %}
+      <li>
+        <div class="arc-list__marker"><span>{{ item.year }}</span></div>
+        <div class="arc-list__content">
+          <p>{{ item.label }}</p>
+          <h3>{{ item.title }}</h3>
+          <span>{{ item.text }}</span>
+        </div>
+      </li>
+    {% endfor %}
+  </ol>
+</section>
 
+<section class="section-block" aria-labelledby="papers-title">
+  <div class="section-heading">
+    <div>
+      <p class="section-kicker">Selected work</p>
+      <h2 id="papers-title">Publications</h2>
+    </div>
+    <a class="text-link" href="/publications/">All publications <span aria-hidden="true">→</span></a>
+  </div>
+  <div class="paper-list">
+    {% for paper in site.data.publications %}
+      {% if paper.selected %}
+        <article class="paper-row">
+          <div class="paper-row__meta">
+            <span>{{ paper.year }}</span>
+            <strong>{{ paper.status }}</strong>
+          </div>
+          <div class="paper-row__body">
+            <h3><a href="{{ paper.paper_url }}">{{ paper.title }}</a></h3>
+            <p class="paper-row__authors">{{ paper.authors | replace: 'Yuyang Gong', '<strong>Yuyang Gong</strong>' }}</p>
+            <p>{{ paper.contribution }}</p>
+            <div class="tag-list">
+              {% for tag in paper.tags %}<span>{{ tag }}</span>{% endfor %}
+            </div>
+          </div>
+          <a class="paper-row__arrow" href="{{ paper.paper_url }}" aria-label="Open {{ paper.short_title }}">↗</a>
+        </article>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
 
----
-
-## Current Research Focuses
-
-- Retrieval Augmented Generation (RAG) Security  
-- Robustness of Neural Ranking Models (NRM)  
-- Trustworthy Large Language Models (LLMs)  
-
----
-
-## Selected Publications
-
-- **Yuyang Gong**, Zhuo Chen, Miaokun Chen, Fengchang Yu, Wei Lu, Xiaofeng Wang, Xiaozhong Liu, Jiawei Liu.   
-  [**Topic-FlipedRAG: Topic-Orientated Adversarial Opinion Manipulation Attacks against RAG models**](https://arxiv.org/abs/2502.01386).  
-  *Usenix Security* (under review).  
-
-- Zhuo Chen, **Yuyang Gong**, Miaokun Chen, Haotan Liu, Qikai Cheng, Fan Zhang, Wei Lu, Xiaozhong Liu, and Jiawei Liu.  
-  [**FlipedRAG: Black-Box Opinion Manipulation Attacks to Retrieval-Augmented Generation of Large Language Models**](https://arxiv.org/abs/2501.02968).  
-  *CCS* (under review).  
-
-
-## Publication Details
-### Topic-FlipRAG: Topic-Oriented Adversarial Opinion Manipulation Attacks Against RAG Models
-
-### Background: Limitations in Current RAG Security Research
-1. **Narrow Focus on Specific Queries**: Most existing studies target attacks on specific queries, which are not practical for real-world scenarios.
-2. **Limited Focus on Fact-based Questions**: Current research mainly targets fact-based questions, which have limited impact and are easily defendable. There is insufficient exploration of open-ended opinion-based questions, especially for controversial topics.
-3. **Predominance of White-Box Attacks**: The majority of existing research focuses on white-box attack scenarios.
-
-### Attack Method:
-We propose a novel attack by poisoning and modifying a small number of documents (without altering their core content or semantics), enabling them to be retrieved by multiple queries related to the same topic. This modified content is then fed into the large model, significantly influencing the RAG-generated opinions. The attack operates under a **black-box** setting, where the retrieval mechanism and LLM parameters are not accessible, and only the end-to-end inputs and outputs of the RAG system are available.
-
-### Contributions and Innovations:
-1. **Task-Level Innovation**: By poisoning a small set of documents, our attack enables the retrieval of these documents by multiple queries related to the same topic. This allows us to influence the user's perception based on their information needs. Compared to sentiment manipulation, our approach impacts the topic-level opinions more deeply and broadly. Unlike single-query attacks, our method operates on topic groups, making it more efficient, covert, and far-reaching in terms of user influence.
-   
-2. **Proposed Topic-Oriented Black-Box RAG Attack**: We introduce a knowledge-guided, multi-granular topic-oriented approach to black-box RAG attacks, a significant advancement in the manipulation of opinion generation for large language models.
-   
-3. **Experimental Validation**: Extensive experiments demonstrate that Topic-FlipedRAG significantly outperforms baseline methods. We conduct thorough ablation experiments and real-world user experiments to validate the practical threats posed by this attack.
-   
-4. **Ineffectiveness of Current Defense Methods**: Current defense strategies, such as perplexity-based, random masking, and reranking approaches, are ineffective against the Topic-FlipedRAG attack.
-
----
-
-### FlipedRAG: Black-Box Opinion Manipulation Attacks to Retrieval-Augmented Generation of Large Language Models
-
-### Key Contributions:
-1.	Novel Attack Proposal: We introduce FlipedRAG, a transfer-based opinion manipulation attack against RAG systems in LLMs within a black-box setting. Unlike previous research, which assumes direct access to IR ranking results, our approach simulates the IR model’s behavior by training a surrogate model using RAG‘s end-to-end outputs and then generates adversarial triggers . This method closely mirrors real-world scenarios, where attackers lack direct access to internal ranking mechanisms.
-2. First Exploration of Adversarial Opinion Manipulation in RAG: To the best of our knowledge, this is the first study exploring adversarial opinion manipulation in RAG systems, specifically for open-ended and controversial topics.
-3. Demonstrated Effectiveness: Through automated evaluations and user experiments, we show that our transfer-based attack can significantly manipulate the opinions generated by RAG systems in a desired direction, achieving an average success rate improvement of 16.7%.
+<section class="contact-band" id="contact" aria-labelledby="contact-title">
+  <div>
+    <p class="section-kicker">Let’s connect</p>
+    <h2 id="contact-title">I welcome conversations about prompt injection, RAG security, and robust LLM systems.</h2>
+  </div>
+  <div class="contact-band__links">
+    <a href="mailto:{{ profile.email }}">Email</a>
+    <a href="{{ site.author.googlescholar }}">Google Scholar</a>
+    <a href="https://github.com/{{ site.author.github }}">GitHub</a>
+    <a href="/cv/">CV</a>
+  </div>
+</section>

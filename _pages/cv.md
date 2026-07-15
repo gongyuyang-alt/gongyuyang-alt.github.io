@@ -1,48 +1,62 @@
 ---
-layout: archive
-title: "CV"
+layout: single
+title: "Curriculum Vitae"
 permalink: /cv/
-author_profile: true
+author_profile: false
 redirect_from:
   - /resume
 ---
 
-{% include base_path %}
+{% assign profile = site.data.profile %}
 
-Education
-======
-* **B.S. in Information Management**, Wuhan University, Wuhan, China (Sep 2022 -- Present)  
-  * GPA: 3.73/4.0  
-  * IELTS: 7.0  
-  * **Major Courses:** Natural Language Processing (4.0), Machine Learning Theory and Practice (4.0), Linear Algebra (4.0), Calculus (4.0), Probability and Statistics (4.0)
+<div class="page-intro cv-intro">
+  <p class="eyebrow">{{ profile.name }}</p>
+  <p>{{ profile.role }} at {{ profile.affiliation }}, working on prompt injection, RAG security, and trustworthy large language models.</p>
+  <p><a href="mailto:{{ profile.email }}">{{ profile.email }}</a> · <a href="{{ site.author.googlescholar }}">Google Scholar</a> · <a href="https://github.com/{{ site.author.github }}">GitHub</a></p>
+</div>
 
-Research Interests
-======
-RAG Security, Robustness of NRM, Trustworthy LLM
+## Education
 
-Selected Papers
-======
-* **Yuyang Gong**, Zhuo Chen, Miaokun Chen, Fengchang Yu, Wei Lu, Xiaofeng Wang, Xiaozhong Liu, Jiawei Liu. 
-*Topic-FlipRAG: Topic-Orientated Adversarial Opinion Manipulation Attacks against RAG models* (Usenix Security under review).
-* Zhuo Chen, **Yuyang Gong**, Miaokun Chen, Haotan Liu, Qikai Cheng, Fan Zhang, Wei Lu, Xiaozhong Liu, Jiawei Liu.  
-  *FlipedRAG: Black-Box Opinion Manipulation Attacks to Retrieval-Augmented Generation of Large Language Models* (CCS under review).
+**{{ profile.education.degree }}**, {{ profile.education.institution }}<br>
+{{ profile.education.dates }} · {{ profile.education.details }}
 
+Relevant coursework: Natural Language Processing, Machine Learning Theory and Practice, Linear Algebra, Calculus, Probability and Statistics.
 
-Research Experience
-======
-* **Knowledge Mining and Information Retrieval Institute, Wuhan University** (Feb 2024 -- Present)  
-  *Research Intern* (Advised by Dr. Jiawei Liu and Prof. Wei Lu)  
-  * Conducted the *RAG opinion manipulation* project, responsible for core experimental implementation and writing, resulting in two publications.  
-  * Led the evaluation of the *LLM-jailbreak* project, testing mainstream attack/defense methods on leading open-source and commercial LLMs, proposing a novel jailbreak method.  
-  * Participated in the development of an RAG-based intelligent QA chatbot.
+## Research interests
 
-* **IBM Lab, Wuhan University** (Oct 2023 -- Jun 2024)  
-  *Research Intern* (Advised by Prof. Long Lu)  
-  * Contributed to the research paper: *Disease Prediction in Electronic Medical Records Based on Pretrained Language Models and Knowledge Enhancement*, focusing on data preprocessing and baseline experiment construction.  
-  * Contributed to the review paper: *Enhancing AI and physician comparisons in clinical practice: a scoping review* (Journal of the American Medical Informatics Association under review), focusing on literature collection, screening, and framework development.
+Prompt injection defense · RAG security · adversarial retrieval · trustworthy LLMs · AI alignment
 
-Skills
-======
-* **Programming and Development:** Proficient in Python; experienced with PyTorch for NLP and IR model development; skilled in Prompt Engineering and soft-finetuning.  
-* **Machine Learning Tools and Frameworks:** Hands-on experience with Huggingface, LangChain, Pyserini, FAISS, and Weights & Biases for model training, retrieval tasks, and experiment tracking.  
-* **Visualization and Data Analysis:** Skilled in using Matplotlib and Tableau for data visualization and analysis.
+## Research experience
+
+### Knowledge Mining and Information Retrieval Institute, Wuhan University
+
+**Research Intern**, February 2024–Present<br>
+Advised by [Dr. Jiawei Liu](https://scholar.google.cz/citations?hl=zh-CN&user=xUpTKD8AAAAJ) and [Prof. Wei Lu](https://scholar.google.cz/citations?hl=zh-CN&user=mRdnCQ4AAAAJ)
+
+- Develop attacks and defenses for LLM systems that consume untrusted retrieved content.
+- Study black-box opinion manipulation in RAG, from individual queries to topic- and discourse-level threat models.
+- Explore generalizable prompt injection defense through adversarial example generation and alignment training.
+- Evaluate jailbreak attacks and defenses across open-source and commercial LLMs.
+
+### IBM Lab, Wuhan University
+
+**Research Intern**, October 2023–June 2024<br>
+Advised by Prof. Long Lu
+
+- Worked on medical knowledge-enhanced ICD coding, including data preparation and baseline experiments.
+- Contributed to literature screening and framework development for a scoping review of AI–physician comparisons in clinical practice.
+
+## Selected publications
+
+{% for paper in site.data.publications %}
+{% if paper.selected %}
+**{{ paper.short_title }}.** {{ paper.authors | replace: 'Yuyang Gong', '**Yuyang Gong**' }}. *{{ paper.venue }}*, {{ paper.year }}. [Paper]({{ paper.paper_url }})<br>
+{% endif %}
+{% endfor %}
+
+## Technical skills
+
+**Programming:** Python, PyTorch<br>
+**LLM / NLP:** Hugging Face, LangChain, prompt engineering, fine-tuning<br>
+**Retrieval:** Pyserini, FAISS, neural ranking models<br>
+**Experimentation:** Weights & Biases, Matplotlib, Tableau

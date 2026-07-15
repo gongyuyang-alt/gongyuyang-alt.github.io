@@ -1,0 +1,74 @@
+# This is the main content file for the homepage.
+# Keep the text concise: the homepage is designed for senior researchers who scan quickly.
+
+name: "Yuyang Gong"
+role: "AI Security Researcher"
+affiliation: "Wuhan University"
+location: "Wuhan, China"
+email: "2498002636gyy@gmail.com"
+
+eyebrow: "Prompt Injection · RAG Security · Trustworthy LLMs"
+headline: "Building AI systems that remain reliable when instructions and retrieved content cannot be trusted."
+intro: >-
+  I study prompt injection and the security of retrieval-augmented generation systems.
+  My work examines how untrusted external content can steer model behavior, and how
+  alignment and system design can make LLM applications more robust.
+availability: "Open to research conversations and collaborations."
+
+affiliation_sentence: >-
+  I conduct research at the Knowledge Mining and Information Retrieval Institute,
+  Wuhan University, advised by Dr. Jiawei Liu and Prof. Wei Lu.
+
+mentors:
+  - name: "Dr. Jiawei Liu"
+    url: "https://scholar.google.cz/citations?hl=zh-CN&user=xUpTKD8AAAAJ"
+  - name: "Prof. Wei Lu"
+    url: "https://scholar.google.cz/citations?hl=zh-CN&user=mRdnCQ4AAAAJ"
+
+research_question: >-
+  How can LLM-based systems preserve the developer's intended behavior when models
+  consume instructions, documents, web content, and tool outputs from sources that
+  may be malicious or simply unreliable?
+
+research_themes:
+  - number: "01"
+    title: "Prompt injection defense"
+    text: >-
+      I develop alignment methods that generalize beyond a fixed catalog of attacks.
+      LocalAlign trains against near-but-wrong responses, tightening the model's
+      robustness boundary around the intended behavior.
+    paper: "LocalAlign"
+  - number: "02"
+    title: "RAG manipulation at scale"
+    text: >-
+      I study how poisoned documents can shift generated opinions across related
+      queries and broader discourse, moving from isolated failures toward realistic,
+      system-level threat models.
+    paper: "Topic-FlipRAG · DiscourseFlip"
+  - number: "03"
+    title: "Black-box adversarial retrieval"
+    text: >-
+      I investigate attacks under practical constraints, where the adversary cannot
+      inspect the retriever or the LLM and must reason from end-to-end system outputs.
+    paper: "FlippedRAG"
+
+research_arc:
+  - year: "2025"
+    label: "Expose"
+    title: "From retrieval poisoning to opinion manipulation"
+    text: "FlippedRAG and Topic-FlipRAG reveal practical black-box attack surfaces in RAG pipelines."
+  - year: "2026"
+    label: "Scale"
+    title: "From topics to discourse-level influence"
+    text: "DiscourseFlip models coordinated influence across a semantic network of queries."
+  - year: "2026 →"
+    label: "Defend"
+    title: "From cataloged attacks to generalizable robustness"
+    text: "LocalAlign shifts the focus toward prompt injection defenses that hold under adaptive, near-target attacks."
+
+education:
+  degree: "B.S. in Information Management"
+  institution: "Wuhan University"
+  dates: "2022–Present"
+  details: "GPA: 3.73/4.0 · IELTS: 7.0"
+

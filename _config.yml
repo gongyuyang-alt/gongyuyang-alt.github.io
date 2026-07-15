@@ -11,7 +11,7 @@ locale                   : "en-US"
 title                    : "Yuyang Gong"
 title_separator          : "-"
 name                     : &name "Yuyang Gong"
-description              : &description "personal description"
+description              : &description "Yuyang Gong studies prompt injection, RAG security, adversarial retrieval, and trustworthy large language models."
 url                      : https://gongyuyang-alt.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "gongyuyang-alt/gongyuyang-alt.github.io"
@@ -24,8 +24,8 @@ author:
   avatar           : "profile.png"
   name             : "Yuyang Gong"
   pronouns         : # example: "she/her"  
-  bio              : "Undergraduate student at WHU"
-  location         : "Wuhan,China"
+  bio              : "AI security researcher studying prompt injection and RAG security."
+  location         : "Wuhan, China"
   employer         : "Wuhan University"
   uri              : # URL
   email            : "2498002636gyy@gmail.com"
@@ -44,7 +44,7 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : #"academicpages"
+  github           : "gongyuyang-alt"
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
@@ -117,7 +117,7 @@ staticman:
       options:
         format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
 atom_feed:
-  hide                   : false     # change to true to hide the RSS feed in the footer
+  hide                   : true      # no blog feed is shown on this research-focused site
   path                   : # blank (default) uses feed.xml
 
 
@@ -135,13 +135,15 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 :  # Open Graph/Twitter default site image
+og_image                 : "og.png"
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  type                   : Person
+  name                   : "Yuyang Gong"
+  links:
+    - "https://scholar.google.cz/citations?hl=zh-CN&user=LMV3kHcAAAAJ"
+    - "https://github.com/gongyuyang-alt"
 
 
 # Analytics
@@ -170,17 +172,30 @@ exclude:
   - CHANGELOG
   - Capfile
   - config
+  - CONTRIBUTING.md
   - Dockerfile
   - Gemfile
   - Gruntfile.js
   - gulpfile.js
   - LICENSE
+  - EDITING_GUIDE.md
+  - files/paper1.pdf
+  - files/paper2.pdf
+  - files/paper3.pdf
+  - files/slides1.pdf
+  - files/slides2.pdf
+  - files/slides3.pdf
   - local
   - log
+  - markdown_generator
   - node_modules
   - package.json*
+  - README.md
   - Rakefile
   - README
+  - talkmap
+  - talkmap.ipynb
+  - talkmap.py
   - tmp
   - vendor
 keep_files:

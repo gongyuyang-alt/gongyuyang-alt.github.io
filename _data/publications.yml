@@ -1,0 +1,63 @@
+# Add new papers at the top. Set selected: true to show a paper on the homepage.
+# Use an empty string for links that are not available yet.
+
+- title: "LocalAlign: Enabling Generalizable Prompt Injection Defense via Generation of Near-Target Adversarial Examples for Alignment Training"
+  short_title: "LocalAlign"
+  year: "2026"
+  venue: "arXiv preprint"
+  status: "Preprint"
+  authors: "Yuyang Gong, Zihao Wang, Jiawei Liu, XiaoFeng Wang"
+  contribution: "A generalizable prompt injection defense that uses near-target adversarial examples and margin-aware alignment."
+  tags: ["Prompt Injection", "Defense", "Alignment"]
+  paper_url: "https://arxiv.org/abs/2605.01462"
+  code_url: ""
+  selected: true
+
+- title: "DiscourseFlip: An Oblique Discourse-Level Opinion Manipulation Attack against Black-box Retrieval-Augmented Generation"
+  short_title: "DiscourseFlip"
+  year: "2026"
+  venue: "arXiv preprint"
+  status: "Preprint"
+  authors: "Yuyang Gong, Miaokun Chen, Jiawei Liu, Zhuo Chen, Guoxiu He, Wei Lu, XiaoFeng Wang, Xiaozhong Liu"
+  contribution: "An agentic, graph-guided attack that studies opinion manipulation across a semantic network of queries."
+  tags: ["RAG Security", "Black-box Attack", "Agents"]
+  paper_url: "https://arxiv.org/abs/2606.01212"
+  code_url: ""
+  selected: true
+
+- title: "Topic-FlipRAG: Topic-Orientated Adversarial Opinion Manipulation Attacks to Retrieval-Augmented Generation Models"
+  short_title: "Topic-FlipRAG"
+  year: "2025"
+  venue: "34th USENIX Security Symposium"
+  status: "USENIX Security '25"
+  authors: "Yuyang Gong, Zhuo Chen, Jiawei Liu, Miaokun Chen, Fengchang Yu, Wei Lu, XiaoFeng Wang, Xiaozhong Liu"
+  contribution: "A two-stage attack pipeline that manipulates RAG opinions across multiple queries related to the same topic."
+  tags: ["RAG Security", "Opinion Manipulation", "Adversarial Retrieval"]
+  paper_url: "https://www.usenix.org/conference/usenixsecurity25/presentation/gong-yuyang"
+  code_url: ""
+  selected: true
+
+- title: "FlippedRAG: Black-Box Opinion Manipulation Adversarial Attacks to Retrieval-Augmented Generation Models"
+  short_title: "FlippedRAG"
+  year: "2025"
+  venue: "ACM SIGSAC Conference on Computer and Communications Security"
+  status: "CCS '25"
+  authors: "Zhuo Chen, Yuyang Gong, Jiawei Liu, Miaokun Chen, Haotan Liu, Qikai Cheng, Fan Zhang, Wei Lu, Xiaozhong Liu"
+  contribution: "A transfer-based black-box attack that exposes vulnerabilities in the retrieval stage of RAG systems."
+  tags: ["RAG Security", "Black-box Attack", "Opinion Manipulation"]
+  paper_url: "https://doi.org/10.1145/3719027.3765023"
+  code_url: ""
+  selected: true
+
+- title: "Medical Knowledge-Enhanced ICD Coding Prediction"
+  short_title: "Medical Knowledge-Enhanced ICD Coding"
+  year: "2026"
+  venue: "Expert Systems with Applications, Vol. 321, 132312"
+  status: "Journal Article"
+  authors: "Fanfan Zhu, Qinghua Zhao, Yuyang Gong, Jingxin Chen, Long Lu"
+  contribution: "Knowledge-enhanced representation learning for automatic clinical coding."
+  tags: ["Clinical NLP", "Knowledge Enhancement"]
+  paper_url: "https://doi.org/10.1016/j.eswa.2026.132312"
+  code_url: ""
+  selected: false
+
