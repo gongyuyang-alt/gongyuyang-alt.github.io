@@ -13,7 +13,7 @@ redirect_from:
 
 ## Education
 
-- **Ph.D.**, {{ profile.affiliation }}, {{ profile.location }} — incoming<br>
+- **Ph.D.**, {{ profile.college }}, {{ profile.affiliation }}, {{ profile.location }} — incoming<br>
   Advisor: [{{ profile.advisor.name }}]({{ profile.advisor.url }})
 - **{{ profile.education.degree }}**, {{ profile.education.institution }}, {{ profile.education.dates }}<br>
   {{ profile.education.details }}
@@ -24,7 +24,7 @@ Prompt injection defense, RAG security, adversarial retrieval, trustworthy large
 
 ## Research Experience
 
-### {{ profile.affiliation }}
+### {{ profile.college }}, {{ profile.affiliation }}
 
 **Incoming Ph.D. Student**<br>
 Advisor: [{{ profile.advisor.name }}]({{ profile.advisor.url }})

@@ -13,7 +13,19 @@ redirect_from:
 
 ## Biography
 
-Hi! I will soon begin my Ph.D. studies at [{{ profile.affiliation }}]({{ profile.affiliation_url }}) in {{ profile.location }}, where I will be advised by [{{ profile.advisor.name }}]({{ profile.advisor.url }}). I received my B.S. in Information Management from Wuhan University, where I was advised by [Prof. Wei Lu](https://scholar.google.cz/citations?hl=zh-CN&user=mRdnCQ4AAAAJ) and [Dr. Jiawei Liu](https://scholar.google.cz/citations?hl=zh-CN&user=xUpTKD8AAAAJ).
+Hi! I will soon begin my Ph.D. at the {{ profile.college }}, [{{ profile.affiliation }}]({{ profile.affiliation_url }}), where I will be advised by [{{ profile.advisor.name }}]({{ profile.advisor.url }}). I received my B.S. from Wuhan University, where I was advised by [Prof. Wei Lu](https://scholar.google.cz/citations?hl=zh-CN&user=mRdnCQ4AAAAJ) and [Dr. Jiawei Liu](https://scholar.google.cz/citations?hl=zh-CN&user=xUpTKD8AAAAJ).
+
+## Selected Publications
+
+{% for paper in site.data.publications %}
+{% if paper.selected %}
+- **[{{ paper.title }}]({{ paper.paper_url }})**<br>
+  {{ paper.authors | replace: 'Yuyang Gong', '**Yuyang Gong**' }}<br>
+  *{{ paper.venue }}*, {{ paper.year }}.
+{% endif %}
+{% endfor %}
+
+For a complete list and updated citation counts, please visit my [Publications](/publications/) page or [Google Scholar]({{ site.author.googlescholar }}).
 
 ## Research
 
@@ -31,19 +43,7 @@ Untrusted data can also manipulate what an LLM does. In a [prompt injection atta
 
 Existing defenses are often trained against fixed attack targets and can miss **near-target attacks**: cases where the attack-induced response remains semantically close to the correct answer but introduces a small, consequential error. Our recent work [LocalAlign](https://arxiv.org/abs/2605.01462) generates these near-target examples automatically, then uses margin-aware weighting to emphasize examples closest to the intended response. By tightening the robustness boundary around correct behavior, LocalAlign reduces attack success rates to below 10% in most evaluated settings. My goal is to develop principled, generalizable, and practical defenses that allow LLM applications to use untrusted data without yielding control to it.
 
-## Selected Publications
-
-{% for paper in site.data.publications %}
-{% if paper.selected %}
-- **[{{ paper.title }}]({{ paper.paper_url }})**<br>
-  {{ paper.authors | replace: 'Yuyang Gong', '**Yuyang Gong**' }}<br>
-  *{{ paper.venue }}*, {{ paper.year }}. {{ paper.contribution }}
-{% endif %}
-{% endfor %}
-
-For a complete list and updated citation counts, please visit my [Publications](/publications/) page or [Google Scholar]({{ site.author.googlescholar }}).
-
 ## Education
 
-- **Ph.D.**, {{ profile.affiliation }}, {{ profile.location }} — incoming
+- **Ph.D.**, {{ profile.college }}, {{ profile.affiliation }}, {{ profile.location }} — incoming
 - **{{ profile.education.degree }}**, {{ profile.education.institution }}, {{ profile.education.dates }}

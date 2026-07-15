@@ -25,9 +25,9 @@ author:
   avatar           : "profile.png"
   name             : "Yuyang Gong"
   pronouns         : # example: "she/her"  
-  bio              : "Incoming Ph.D. student at NTU studying AI security."
+  bio              : "Incoming Ph.D. student at NTU's College of Computing and Data Science (CCDS), studying AI security."
   location         : "Singapore"
-  employer         : "Nanyang Technological University (incoming)"
+  employer         : "NTU CCDS (incoming)"
   uri              : # URL
   email            : "2498002636gyy@gmail.com"
 

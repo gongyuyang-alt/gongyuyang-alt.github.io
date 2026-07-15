@@ -5,6 +5,7 @@ name: "Yuyang Gong"
 role: "Incoming Ph.D. Student"
 affiliation: "Nanyang Technological University"
 affiliation_url: "https://www.ntu.edu.sg/"
+college: "College of Computing and Data Science (CCDS)"
 location: "Singapore"
 email: "2498002636gyy@gmail.com"
 
@@ -13,7 +14,7 @@ advisor:
   url: "https://wangxiaofeng7.github.io/"
 
 education:
-  degree: "B.S. in Information Management"
+  degree: "B.S."
   institution: "Wuhan University"
   dates: "2022–2026"
   details: "GPA: 3.73/4.0 · IELTS: 7.0"

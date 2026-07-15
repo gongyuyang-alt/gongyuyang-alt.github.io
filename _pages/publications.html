@@ -14,7 +14,5 @@ My recent work focuses on prompt injection and RAG security, spanning black-box 
 {{ paper.authors | replace: 'Yuyang Gong', '**Yuyang Gong**' }}<br>
 *{{ paper.venue }}*, {{ paper.year }} · **{{ paper.status }}**
 
-{{ paper.contribution }}
-
 [Paper]({{ paper.paper_url }}){% if paper.code_url != "" %} · [Code]({{ paper.code_url }}){% endif %}
 {% endfor %}
