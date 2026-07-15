@@ -1,9 +1,9 @@
 ---
-layout: home
+layout: single
 permalink: /
-title: "Yuyang Gong — Prompt Injection & RAG Security"
+title: "Yuyang Gong"
 excerpt: "Yuyang Gong studies prompt injection, RAG security, and trustworthy large language models."
-author_profile: false
+author_profile: true
 redirect_from:
   - /about/
   - /about.html
@@ -11,115 +11,33 @@ redirect_from:
 
 {% assign profile = site.data.profile %}
 
-<section class="research-hero" aria-labelledby="hero-title">
-  <div class="research-hero__copy">
-    <p class="eyebrow">{{ profile.eyebrow }}</p>
-    <h1 id="hero-title">{{ profile.headline }}</h1>
-    <p class="research-hero__intro">{{ profile.intro }}</p>
-    <p class="research-hero__affiliation">{{ profile.affiliation_sentence }}</p>
-    <div class="research-hero__actions">
-      <a class="button button--primary" href="/publications/">View publications</a>
-      <a class="button button--quiet" href="mailto:{{ profile.email }}">Start a conversation</a>
-    </div>
-    <p class="availability"><span aria-hidden="true"></span>{{ profile.availability }}</p>
-  </div>
-  <aside class="research-hero__portrait" aria-label="Profile">
-    <div class="portrait-frame">
-      <img src="/images/profile.png" alt="Portrait of Yuyang Gong">
-    </div>
-    <div class="portrait-meta">
-      <strong>{{ profile.name }}</strong>
-      <span>{{ profile.role }}</span>
-      <span>{{ profile.affiliation }}</span>
-    </div>
-  </aside>
-</section>
-<section class="research-question section-block" id="research">
-  <p class="section-kicker">The question behind my work</p>
-  <blockquote>{{ profile.research_question }}</blockquote>
-</section>
+## Biography
 
-<section class="section-block" aria-labelledby="focus-title">
-  <div class="section-heading">
-    <div>
-      <p class="section-kicker">Research focus</p>
-      <h2 id="focus-title">Securing the boundary between instruction and data</h2>
-    </div>
-    <p>My research connects attacks and defenses: understanding realistic failures first, then using those failures to design stronger alignment.</p>
-  </div>
-  <div class="theme-grid">
-    {% for theme in profile.research_themes %}
-      <article class="theme-card">
-        <span class="theme-card__number">{{ theme.number }}</span>
-        <h3>{{ theme.title }}</h3>
-        <p>{{ theme.text }}</p>
-        <span class="theme-card__paper">{{ theme.paper }}</span>
-      </article>
-    {% endfor %}
-  </div>
-</section>
+Hi! I am currently studying at [{{ profile.affiliation }}]({{ profile.affiliation_url }}) in {{ profile.location }}, advised by [{{ profile.advisor.name }}]({{ profile.advisor.url }}).
 
-<section class="section-block research-arc" aria-labelledby="arc-title">
-  <div class="section-heading section-heading--compact">
-    <div>
-      <p class="section-kicker">Research trajectory</p>
-      <h2 id="arc-title">A coherent path from attacks to defenses</h2>
-    </div>
-  </div>
-  <ol class="arc-list">
-    {% for item in profile.research_arc %}
-      <li>
-        <div class="arc-list__marker"><span>{{ item.year }}</span></div>
-        <div class="arc-list__content">
-          <p>{{ item.label }}</p>
-          <h3>{{ item.title }}</h3>
-          <span>{{ item.text }}</span>
-        </div>
-      </li>
-    {% endfor %}
-  </ol>
-</section>
+I study **AI security**, with a particular focus on **prompt injection** and the security of retrieval-augmented generation (RAG) systems. My research asks how LLM-based applications can preserve the intended instruction when they consume untrusted documents, web content, and tool outputs.
 
-<section class="section-block" aria-labelledby="papers-title">
-  <div class="section-heading">
-    <div>
-      <p class="section-kicker">Selected work</p>
-      <h2 id="papers-title">Publications</h2>
-    </div>
-    <a class="text-link" href="/publications/">All publications <span aria-hidden="true">→</span></a>
-  </div>
-  <div class="paper-list">
-    {% for paper in site.data.publications %}
-      {% if paper.selected %}
-        <article class="paper-row">
-          <div class="paper-row__meta">
-            <span>{{ paper.year }}</span>
-            <strong>{{ paper.status }}</strong>
-          </div>
-          <div class="paper-row__body">
-            <h3><a href="{{ paper.paper_url }}">{{ paper.title }}</a></h3>
-            <p class="paper-row__authors">{{ paper.authors | replace: 'Yuyang Gong', '<strong>Yuyang Gong</strong>' }}</p>
-            <p>{{ paper.contribution }}</p>
-            <div class="tag-list">
-              {% for tag in paper.tags %}<span>{{ tag }}</span>{% endfor %}
-            </div>
-          </div>
-          <a class="paper-row__arrow" href="{{ paper.paper_url }}" aria-label="Open {{ paper.short_title }}">↗</a>
-        </article>
-      {% endif %}
-    {% endfor %}
-  </div>
-</section>
+My recent work spans both attacks and defenses. I investigate practical black-box attacks that manipulate retrieval and model behavior, and develop generalizable defenses that remain robust beyond a fixed set of known attacks. Before joining NTU, I studied Information Management at Wuhan University and conducted research on trustworthy LLMs and information retrieval security.
 
-<section class="contact-band" id="contact" aria-labelledby="contact-title">
-  <div>
-    <p class="section-kicker">Let’s connect</p>
-    <h2 id="contact-title">I welcome conversations about prompt injection, RAG security, and robust LLM systems.</h2>
-  </div>
-  <div class="contact-band__links">
-    <a href="mailto:{{ profile.email }}">Email</a>
-    <a href="{{ site.author.googlescholar }}">Google Scholar</a>
-    <a href="https://github.com/{{ site.author.github }}">GitHub</a>
-    <a href="/cv/">CV</a>
-  </div>
-</section>
+## Research Focus
+
+- **Prompt injection defense:** alignment methods that generalize to adaptive and near-target attacks.
+- **RAG security:** retrieval poisoning and opinion manipulation across queries, topics, and broader discourse.
+- **Black-box AI security:** realistic attacks and evaluations without access to model parameters or internal retrieval results.
+
+## Selected Publications
+
+{% for paper in site.data.publications %}
+{% if paper.selected %}
+- **[{{ paper.title }}]({{ paper.paper_url }})**<br>
+  {{ paper.authors | replace: 'Yuyang Gong', '**Yuyang Gong**' }}<br>
+  *{{ paper.venue }}*, {{ paper.year }}. {{ paper.contribution }}
+{% endif %}
+{% endfor %}
+
+For a complete list and updated citation counts, please visit my [Publications](/publications/) page or [Google Scholar]({{ site.author.googlescholar }}).
+
+## Education
+
+- **{{ profile.affiliation }}**, {{ profile.location }} — current
+- **{{ profile.education.degree }}**, {{ profile.education.institution }}, {{ profile.education.dates }}

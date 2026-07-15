@@ -24,9 +24,9 @@ author:
   avatar           : "profile.png"
   name             : "Yuyang Gong"
   pronouns         : # example: "she/her"  
-  bio              : "AI security researcher studying prompt injection and RAG security."
-  location         : "Wuhan, China"
-  employer         : "Wuhan University"
+  bio              : "Student researcher at NTU working on prompt injection and RAG security."
+  location         : "Singapore"
+  employer         : "Nanyang Technological University"
   uri              : # URL
   email            : "2498002636gyy@gmail.com"
 
@@ -135,7 +135,7 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 : "og.png"
+og_image                 :
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
