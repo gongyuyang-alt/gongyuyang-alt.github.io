@@ -29,9 +29,7 @@ Prompt injection defense, RAG security, adversarial retrieval, trustworthy large
 **Incoming Ph.D. Student**<br>
 Advisor: [{{ profile.advisor.name }}]({{ profile.advisor.url }})
 
-- Will study prompt injection attacks and defenses for LLM-integrated systems.
-- Will develop robust alignment methods for models that consume untrusted external data.
-- Will investigate practical security risks in retrieval-augmented and agentic AI systems.
+Research focus: prompt injection, RAG security, and robust alignment for LLM applications that consume untrusted external data.
 
 ### Knowledge Mining and Information Retrieval Institute, Wuhan University
 

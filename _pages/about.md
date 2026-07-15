@@ -13,17 +13,9 @@ redirect_from:
 
 ## Biography
 
-Hi! I will soon begin my Ph.D. studies at [{{ profile.affiliation }}]({{ profile.affiliation_url }}) in {{ profile.location }}, where I will be advised by [{{ profile.advisor.name }}]({{ profile.advisor.url }}).
+Hi! I will soon begin my Ph.D. studies at [{{ profile.affiliation }}]({{ profile.affiliation_url }}) in {{ profile.location }}, where I will be advised by [{{ profile.advisor.name }}]({{ profile.advisor.url }}). I received my B.S. in Information Management from Wuhan University.
 
-I study **AI security**, with a particular focus on **prompt injection** and the security of retrieval-augmented generation (RAG) systems. My research asks how LLM-based applications can preserve the intended instruction when they consume untrusted documents, web content, and tool outputs.
-
-My recent work spans both attacks and defenses. I investigate practical black-box attacks that manipulate retrieval and model behavior, and develop generalizable defenses that remain robust beyond a fixed set of known attacks. I received my B.S. in Information Management from Wuhan University, where I worked on trustworthy LLMs and information retrieval security.
-
-## Research Focus
-
-- **Prompt injection defense:** alignment methods that generalize to adaptive and near-target attacks.
-- **RAG security:** retrieval poisoning and opinion manipulation across queries, topics, and broader discourse.
-- **Black-box AI security:** realistic attacks and evaluations without access to model parameters or internal retrieval results.
+My research focuses on **AI security**, especially **prompt injection** and retrieval-augmented generation (RAG) security. I study practical black-box attacks that manipulate retrieval and model behavior, as well as defenses that help LLM applications preserve their intended instructions when consuming untrusted content.
 
 ## Selected Publications
 

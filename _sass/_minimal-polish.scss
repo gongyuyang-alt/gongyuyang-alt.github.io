@@ -1,0 +1,29 @@
+/* Small-screen safeguards for the compact academic profile layout. */
+@media screen and (max-width: 37.5em) {
+  .author__avatar,
+  .author__content,
+  .author__urls-wrapper {
+    display: block;
+    width: 100%;
+  }
+
+  .author__avatar {
+    margin-bottom: 0.6rem;
+  }
+
+  .author__avatar img {
+    max-width: 104px;
+  }
+
+  .author__content {
+    padding: 0;
+  }
+
+  .author__urls-wrapper {
+    margin-top: 0.6rem;
+  }
+
+  .page__content {
+    overflow-wrap: anywhere;
+  }
+}
