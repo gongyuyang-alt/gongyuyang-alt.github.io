@@ -13,11 +13,11 @@ redirect_from:
 
 ## Biography
 
-Hi! I am currently studying at [{{ profile.affiliation }}]({{ profile.affiliation_url }}) in {{ profile.location }}, advised by [{{ profile.advisor.name }}]({{ profile.advisor.url }}).
+Hi! I will soon begin my Ph.D. studies at [{{ profile.affiliation }}]({{ profile.affiliation_url }}) in {{ profile.location }}, where I will be advised by [{{ profile.advisor.name }}]({{ profile.advisor.url }}).
 
 I study **AI security**, with a particular focus on **prompt injection** and the security of retrieval-augmented generation (RAG) systems. My research asks how LLM-based applications can preserve the intended instruction when they consume untrusted documents, web content, and tool outputs.
 
-My recent work spans both attacks and defenses. I investigate practical black-box attacks that manipulate retrieval and model behavior, and develop generalizable defenses that remain robust beyond a fixed set of known attacks. Before joining NTU, I studied Information Management at Wuhan University and conducted research on trustworthy LLMs and information retrieval security.
+My recent work spans both attacks and defenses. I investigate practical black-box attacks that manipulate retrieval and model behavior, and develop generalizable defenses that remain robust beyond a fixed set of known attacks. I received my B.S. in Information Management from Wuhan University, where I worked on trustworthy LLMs and information retrieval security.
 
 ## Research Focus
 
@@ -39,5 +39,5 @@ For a complete list and updated citation counts, please visit my [Publications](
 
 ## Education
 
-- **{{ profile.affiliation }}**, {{ profile.location }} — current
+- **Ph.D.**, {{ profile.affiliation }}, {{ profile.location }} — incoming
 - **{{ profile.education.degree }}**, {{ profile.education.institution }}, {{ profile.education.dates }}

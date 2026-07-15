@@ -15,6 +15,7 @@ description              : &description "Yuyang Gong studies prompt injection, R
 url                      : https://gongyuyang-alt.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "gongyuyang-alt/gongyuyang-alt.github.io"
+asset_version            : "20260715-2"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
@@ -24,7 +25,7 @@ author:
   avatar           : "profile.png"
   name             : "Yuyang Gong"
   pronouns         : # example: "she/her"  
-  bio              : "Student researcher at NTU working on prompt injection and RAG security."
+  bio              : "Incoming Ph.D. student at NTU studying prompt injection and RAG security."
   location         : "Singapore"
   employer         : "Nanyang Technological University"
   uri              : # URL

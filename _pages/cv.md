@@ -13,8 +13,8 @@ redirect_from:
 
 ## Education
 
-- **{{ profile.affiliation }}**, {{ profile.location }} — current<br>
-  Advised by [{{ profile.advisor.name }}]({{ profile.advisor.url }})
+- **Ph.D.**, {{ profile.affiliation }}, {{ profile.location }} — incoming<br>
+  Advisor: [{{ profile.advisor.name }}]({{ profile.advisor.url }})
 - **{{ profile.education.degree }}**, {{ profile.education.institution }}, {{ profile.education.dates }}<br>
   {{ profile.education.details }}
 
@@ -26,12 +26,12 @@ Prompt injection defense, RAG security, adversarial retrieval, trustworthy large
 
 ### {{ profile.affiliation }}
 
-**Student Researcher**, current<br>
-Advised by [{{ profile.advisor.name }}]({{ profile.advisor.url }})
+**Incoming Ph.D. Student**<br>
+Advisor: [{{ profile.advisor.name }}]({{ profile.advisor.url }})
 
-- Study prompt injection attacks and defenses for LLM-integrated systems.
-- Develop robust alignment methods for models that consume untrusted external data.
-- Investigate practical security risks in retrieval-augmented and agentic AI systems.
+- Will study prompt injection attacks and defenses for LLM-integrated systems.
+- Will develop robust alignment methods for models that consume untrusted external data.
+- Will investigate practical security risks in retrieval-augmented and agentic AI systems.
 
 ### Knowledge Mining and Information Retrieval Institute, Wuhan University
 
