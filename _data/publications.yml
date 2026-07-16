@@ -6,8 +6,8 @@
   year: "2026"
   venue: "arXiv preprint"
   status: "Preprint"
-  authors: "Yuyang Gong, Zihao Wang, Jiawei Liu, XiaoFeng Wang"
-  contribution: "A generalizable prompt injection defense that uses near-target adversarial examples and margin-aware alignment."
+  authors: "Yuyang Gong<sup>&#42;</sup>, Zihao Wang<sup>&#42;</sup>, Jiawei Liu, XiaoFeng Wang"
+  equal_contribution: true
   tags: ["Prompt Injection", "Defense", "Alignment"]
   paper_url: "https://arxiv.org/abs/2605.01462"
   code_url: ""
@@ -18,8 +18,8 @@
   year: "2026"
   venue: "arXiv preprint"
   status: "Preprint"
-  authors: "Yuyang Gong, Miaokun Chen, Jiawei Liu, Zhuo Chen, Guoxiu He, Wei Lu, XiaoFeng Wang, Xiaozhong Liu"
-  contribution: "An agentic, graph-guided attack that studies opinion manipulation across a semantic network of queries."
+  authors: "Yuyang Gong<sup>&#42;</sup>, Miaokun Chen<sup>&#42;</sup>, Jiawei Liu, Zhuo Chen, Guoxiu He, Wei Lu, XiaoFeng Wang, Xiaozhong Liu"
+  equal_contribution: true
   tags: ["RAG Security", "Black-box Attack", "Agents"]
   paper_url: "https://arxiv.org/abs/2606.01212"
   code_url: ""
@@ -31,7 +31,6 @@
   venue: "34th USENIX Security Symposium"
   status: "USENIX Security '25"
   authors: "Yuyang Gong, Zhuo Chen, Jiawei Liu, Miaokun Chen, Fengchang Yu, Wei Lu, XiaoFeng Wang, Xiaozhong Liu"
-  contribution: "A two-stage attack pipeline that manipulates RAG opinions across multiple queries related to the same topic."
   tags: ["RAG Security", "Opinion Manipulation", "Adversarial Retrieval"]
   paper_url: "https://www.usenix.org/conference/usenixsecurity25/presentation/gong-yuyang"
   code_url: ""
@@ -43,7 +42,6 @@
   venue: "ACM SIGSAC Conference on Computer and Communications Security"
   status: "CCS '25"
   authors: "Zhuo Chen, Yuyang Gong, Jiawei Liu, Miaokun Chen, Haotan Liu, Qikai Cheng, Fan Zhang, Wei Lu, Xiaozhong Liu"
-  contribution: "A transfer-based black-box attack that exposes vulnerabilities in the retrieval stage of RAG systems."
   tags: ["RAG Security", "Black-box Attack", "Opinion Manipulation"]
   paper_url: "https://doi.org/10.1145/3719027.3765023"
   code_url: ""
@@ -55,9 +53,7 @@
   venue: "Expert Systems with Applications, Vol. 321, 132312"
   status: "Journal Article"
   authors: "Fanfan Zhu, Qinghua Zhao, Yuyang Gong, Jingxin Chen, Long Lu"
-  contribution: "Knowledge-enhanced representation learning for automatic clinical coding."
   tags: ["Clinical NLP", "Knowledge Enhancement"]
   paper_url: "https://doi.org/10.1016/j.eswa.2026.132312"
   code_url: ""
   selected: false
-

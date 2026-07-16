@@ -56,6 +56,8 @@ Advised by Prof. Long Lu
 {% endif %}
 {% endfor %}
 
+<small><sup>&#42;</sup> Equal contribution.</small>
+
 ## Technical Skills
 
 - **Programming:** Python, PyTorch

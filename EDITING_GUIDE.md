@@ -19,10 +19,11 @@
 - `title`、`short_title`
 - `year`、`venue`、`status`
 - `authors`：作者列表中请保留英文名 `Yuyang Gong`，网站会自动加粗
-- `contribution`：用一句话说明论文解决了什么问题
 - `tags`
 - `paper_url`、`code_url`
-- `selected: true`：同时显示在首页；`false`：只显示在 Publications 页面
+- `selected: true`：显示在首页和 CV；`false`：仅保留在数据文件中
+
+完整论文列表与引用数统一以 Google Scholar 为准。
 
 Google Scholar 引用数会持续变化，因此网站没有手动写引用数，而是直接链接到 Scholar。
 

@@ -15,18 +15,6 @@ redirect_from:
 
 Hi! I will soon begin my Ph.D. at the {{ profile.college }}, [{{ profile.affiliation }}]({{ profile.affiliation_url }}), where I will be advised by [{{ profile.advisor.name }}]({{ profile.advisor.url }}). I received my B.S. from Wuhan University, where I was advised by [Prof. Wei Lu](https://scholar.google.cz/citations?hl=zh-CN&user=mRdnCQ4AAAAJ) and [Dr. Jiawei Liu](https://scholar.google.cz/citations?hl=zh-CN&user=xUpTKD8AAAAJ).
 
-## Selected Publications
-
-{% for paper in site.data.publications %}
-{% if paper.selected %}
-- **[{{ paper.title }}]({{ paper.paper_url }})**<br>
-  {{ paper.authors | replace: 'Yuyang Gong', '**Yuyang Gong**' }}<br>
-  *{{ paper.venue }}*, {{ paper.year }}.
-{% endif %}
-{% endfor %}
-
-For a complete list and updated citation counts, please visit my [Publications](/publications/) page or [Google Scholar]({{ site.author.googlescholar }}).
-
 ## Research
 
 Real-world LLM applications increasingly rely on external data—from retrieved documents and web pages to user files and tool outputs. My research asks how to keep these systems trustworthy when untrusted data can manipulate both **what models see** and **what models do**.
@@ -42,6 +30,20 @@ My work studies this risk across layers and scales: from [certifiable robustness
 Untrusted data can also manipulate what an LLM does. In a [prompt injection attack](https://www.ibm.com/think/topics/prompt-injection), instructions hidden in retrieved documents, web pages, emails, or tool outputs attempt to override the trusted task. OWASP identifies prompt injection as [LLM01 in its 2025 Top 10 for LLM applications](https://genai.owasp.org/llmrisk/llm01-prompt-injection/).
 
 Existing defenses are often trained against fixed attack targets and can miss **near-target attacks**: cases where the attack-induced response remains semantically close to the correct answer but introduces a small, consequential error. Our recent work [LocalAlign](https://arxiv.org/abs/2605.01462) generates these near-target examples automatically, then uses margin-aware weighting to emphasize examples closest to the intended response. By tightening the robustness boundary around correct behavior, LocalAlign reduces attack success rates to below 10% in most evaluated settings. My goal is to develop principled, generalizable, and practical defenses that allow LLM applications to use untrusted data without yielding control to it.
+
+## Selected Publications
+
+{% for paper in site.data.publications %}
+{% if paper.selected %}
+- **[{{ paper.title }}]({{ paper.paper_url }})**<br>
+  {{ paper.authors | replace: 'Yuyang Gong', '**Yuyang Gong**' }}<br>
+  *{{ paper.venue }}*, {{ paper.year }}.
+{% endif %}
+{% endfor %}
+
+<small><sup>&#42;</sup> Equal contribution.</small>
+
+For the complete publication list and updated citation counts, please visit my [Google Scholar]({{ site.author.googlescholar }}).
 
 ## Education
 
