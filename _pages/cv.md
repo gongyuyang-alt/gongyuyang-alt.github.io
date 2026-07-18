@@ -52,7 +52,7 @@ Advised by Prof. Long Lu
 
 {% for paper in site.data.publications %}
 {% if paper.selected %}
-- **[{{ paper.short_title }}]({{ paper.paper_url }})**. {{ paper.authors | replace: 'Yuyang Gong', '**Yuyang Gong**' }}. *{{ paper.venue }}*, {{ paper.year }}.
+- **[{{ paper.short_title }}]({{ paper.paper_url }})**. {{ paper.authors | replace: 'Yuyang Gong', '**Yuyang Gong**' }}. *{{ paper.venue }}*, {{ paper.year }}{% if paper.to_appear %} (**accepted; to appear**){% endif %}.
 {% endif %}
 {% endfor %}
 

@@ -4,8 +4,9 @@
 - title: "LocalAlign: Enabling Generalizable Prompt Injection Defense via Generation of Near-Target Adversarial Examples for Alignment Training"
   short_title: "LocalAlign"
   year: "2026"
-  venue: "arXiv preprint"
-  status: "Preprint"
+  venue: "ACM Conference on Computer and Communications Security (CCS)"
+  status: "Accepted"
+  to_appear: true
   authors: "Yuyang Gong<sup>&#42;</sup>, Zihao Wang<sup>&#42;</sup>, Jiawei Liu, XiaoFeng Wang"
   equal_contribution: true
   tags: ["Prompt Injection", "Defense", "Alignment"]

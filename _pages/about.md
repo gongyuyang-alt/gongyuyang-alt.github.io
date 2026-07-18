@@ -13,7 +13,7 @@ redirect_from:
 
 ## Biography
 
-Hi! I will soon begin my Ph.D. at the {{ profile.college }}, [{{ profile.affiliation }}]({{ profile.affiliation_url }}), where I will be advised by [{{ profile.advisor.name }}]({{ profile.advisor.url }}). I received my B.S. from Wuhan University, where I was advised by [Prof. Wei Lu](https://scholar.google.cz/citations?hl=zh-CN&user=mRdnCQ4AAAAJ) and [Dr. Jiawei Liu](https://scholar.google.cz/citations?hl=zh-CN&user=xUpTKD8AAAAJ).
+Hi! I am Yuyang Gong. I will soon begin my Ph.D. at the {{ profile.college }}, [{{ profile.affiliation }}]({{ profile.affiliation_url }}), where I will study AI security under the supervision of [{{ profile.advisor.name }}]({{ profile.advisor.url }}). I received my B.S. from Wuhan University, where I was advised by [Prof. Wei Lu](https://scholar.google.cz/citations?hl=zh-CN&user=mRdnCQ4AAAAJ) and [Dr. Jiawei Liu](https://scholar.google.cz/citations?hl=zh-CN&user=xUpTKD8AAAAJ).
 
 ## Research
 
@@ -37,7 +37,7 @@ Existing defenses are often trained against fixed attack targets and can miss **
 {% if paper.selected %}
 - **[{{ paper.title }}]({{ paper.paper_url }})**<br>
   {{ paper.authors | replace: 'Yuyang Gong', '**Yuyang Gong**' }}<br>
-  *{{ paper.venue }}*, {{ paper.year }}.
+  *{{ paper.venue }}*, {{ paper.year }}{% if paper.to_appear %} (**accepted; to appear**){% endif %}.
 {% endif %}
 {% endfor %}
 
