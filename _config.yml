@@ -22,7 +22,7 @@ asset_version            : "20260715-3"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "profile-oxford.jpg"
   name             : "Yuyang Gong"
   pronouns         : # example: "she/her"  
   bio              : "Incoming Ph.D. student at NTU's College of Computing and Data Science (CCDS), studying AI security."
