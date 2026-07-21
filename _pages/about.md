@@ -42,7 +42,7 @@ Real-world LLM applications increasingly rely on external data—from retrieved 
 
 RAG grounds language models in external knowledge, but it also turns retrieval into a security boundary. Without accessing model parameters, an attacker can manipulate documents or rankings to control which evidence reaches the model and how information is presented to users.
 
-My work studies this risk across layers and scales: from [certifiable robustness for neural ranking](https://arxiv.org/abs/2512.23307), to black-box manipulation of [individual answers(CCS 25)](https://doi.org/10.1145/3719027.3765023), [topic-wide viewpoints(USENIX 25)](https://www.usenix.org/conference/usenixsecurity25/presentation/gong-yuyang), and [discourse-level information exposure](https://arxiv.org/abs/2606.01212). These attacks are difficult to notice because the resulting responses may remain fluent and plausible. I aim to build defenses that keep RAG systems reliable in open, dynamic, and partially untrusted information environments.
+My work studies this risk across layers and scales: from [certifiable robustness for neural ranking](https://arxiv.org/abs/2512.23307), to black-box manipulation of [individual answers (CCS 25)](https://doi.org/10.1145/3719027.3765023), [topic-wide viewpoints (USENIX 25)](https://www.usenix.org/conference/usenixsecurity25/presentation/gong-yuyang), and [discourse-level information exposure](https://arxiv.org/abs/2606.01212). These attacks are difficult to notice because the resulting responses may remain fluent and plausible. I aim to build defenses that keep RAG systems reliable in open, dynamic, and partially untrusted information environments.
 
 
 ### Prompt Injection: Manipulating What Models Do
