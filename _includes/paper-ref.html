@@ -1,0 +1,1 @@
+{%- comment -%} Inline reference to a paper by its short_title in _data/publications.yml: "<a>Name</a>, VENUE" {%- endcomment -%}{%- assign ref = site.data.publications | where: "short_title", include.name | first -%}{%- if ref -%}<a href="{{ ref.paper_url }}">{{ ref.short_title }}</a>{%- if ref.badge %}, {{ ref.badge }}{%- endif -%}{%- else -%}{{ include.name }}{%- endif -%}

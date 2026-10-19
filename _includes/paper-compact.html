@@ -1,0 +1,6 @@
+{% assign paper = include.paper %}
+<li>
+<span class="paper-title"><a href="{{ paper.paper_url }}">{{ paper.title }}</a></span>{% if paper.badge %}<span class="pub-badge">{{ paper.badge }}</span>{% endif %}
+<span class="paper-authors">{{ paper.authors | replace: 'Yuyang Gong', '<strong>Yuyang Gong</strong>' }}</span>
+<span class="paper-venue">{{ paper.venue }}{% if paper.year %}, {{ paper.year }}{% endif %}{% if paper.links and paper.links.size > 0 %} &middot; {% for link in paper.links %}{% unless forloop.first %} / {% endunless %}<a href="{{ link.url }}">{{ link.label }}</a>{% endfor %}{% endif %}</span>
+</li>

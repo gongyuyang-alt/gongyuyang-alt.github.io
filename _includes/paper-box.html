@@ -1,0 +1,12 @@
+{% include base_path %}
+{% assign paper = include.paper %}
+<div class="paper-box">
+<div class="paper-box-image"><a href="{{ paper.paper_url }}">{% if paper.badge %}<span class="badge">{{ paper.badge }}</span>{% endif %}<img src="{{ base_path }}/images/papers/{{ paper.image }}" alt="Key figure from {{ paper.short_title | default: paper.title }}" loading="lazy"></a></div>
+<div class="paper-box-text">
+<p class="paper-title"><a href="{{ paper.paper_url }}">{{ paper.title }}</a></p>
+<p class="paper-authors">{{ paper.authors | replace: 'Yuyang Gong', '<strong>Yuyang Gong</strong>' }}</p>
+<p class="paper-venue">{{ paper.venue }}{% if paper.year %}, {{ paper.year }}{% endif %}{% if paper.to_appear %} <span class="paper-status">(to appear)</span>{% endif %}</p>
+{% if paper.links and paper.links.size > 0 %}<p class="paper-links">{% for link in paper.links %}{% unless forloop.first %} / {% endunless %}<a href="{{ link.url }}">{{ link.label }}</a>{% endfor %}</p>{% endif %}
+{% if paper.note %}<p class="paper-note">{{ paper.note }}</p>{% endif %}
+</div>
+</div>

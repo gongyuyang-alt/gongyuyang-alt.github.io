@@ -1,11 +1,14 @@
 # Frequently updated personal information.
 # Homepage prose lives in _pages/about.md; publications live in publications.yml.
+# Contact links (email, Google Scholar, GitHub, ...) live under `author` in _config.yml.
 
 name: "Yuyang Gong"
-role: "Incoming Ph.D. Student"
+role: "Ph.D. student"                 # shown in the sidebar together with affiliation_short
 affiliation: "Nanyang Technological University"
+affiliation_short: "NTU CCDS"
 affiliation_url: "https://www.ntu.edu.sg/"
 college: "College of Computing and Data Science (CCDS)"
+college_url: "https://www.ntu.edu.sg/computing"
 location: "Singapore"
 email: "2498002636gyy@gmail.com"
 
@@ -13,8 +16,32 @@ advisor:
   name: "Prof. XiaoFeng Wang"
   url: "https://wangxiaofeng7.github.io/"
 
-education:
-  degree: "B.S."
+collaborators:
+  - name: "Zihao Wang"
+    url: "https://scholar.google.cz/citations?user=Ltev3eAAAAAJ&hl=zh-CN"
+
+undergrad:
   institution: "Wuhan University"
-  dates: "2022–2026"
-  details: "GPA: 3.73/4.0 · IELTS: 7.0"
+  institution_url: "https://en.whu.edu.cn/"
+  advisors:
+    - name: "Prof. Wei Lu"
+      url: "https://scholar.google.cz/citations?hl=zh-CN&user=mRdnCQ4AAAAJ"
+    - name: "Dr. Jiawei Liu"
+      url: "https://scholar.google.cz/citations?hl=zh-CN&user=xUpTKD8AAAAJ"
+
+# Rendered in the "Education" section, top entry first.
+# `note` is optional and shown as a second line; `details` is kept for reference and not displayed.
+education:
+  - degree: "Ph.D. student"
+    field: "College of Computing and Data Science"
+    institution: "Nanyang Technological University"
+    location: "Singapore"
+    dates: "2026 – present"
+    note: "Advisor: Prof. XiaoFeng Wang"
+  - degree: "B.S."
+    field: ""
+    institution: "Wuhan University"
+    location: "Wuhan, China"
+    dates: "2022 – 2026"
+    note: "Advisors: Prof. Wei Lu and Dr. Jiawei Liu"
+    details: "GPA: 3.73/4.0 · IELTS: 7.0"

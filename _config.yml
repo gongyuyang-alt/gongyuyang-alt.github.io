@@ -11,11 +11,11 @@ locale                   : "en-US"
 title                    : "Yuyang Gong"
 title_separator          : "-"
 name                     : &name "Yuyang Gong"
-description              : &description "Yuyang Gong studies prompt injection, RAG security, adversarial retrieval, and trustworthy large language models."
+description              : &description "Yuyang Gong is a Ph.D. student at NTU CCDS working on LLM security: prompt injection defense, RAG security, adversarial retrieval and trustworthy AI agents."
 url                      : https://gongyuyang-alt.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "gongyuyang-alt/gongyuyang-alt.github.io"
-asset_version            : "20260715-3"
+asset_version            : "20261017-3"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
@@ -25,9 +25,10 @@ author:
   avatar           : "profile-oxford.jpg"
   name             : "Yuyang Gong"
   pronouns         : # example: "she/her"  
-  bio              : "PhD student at NTU CCDS"
+  bio              : "AI Security"
   location         : "Singapore"
   uri              : # URL
+  cv               : # e.g. "/files/cv.pdf" - adds a CV link to the sidebar when set
   email            : "2498002636gyy@gmail.com"
 
   # Academic websites
@@ -45,6 +46,7 @@ author:
   codepen          : # Username
   dribbble         : # Username
   github           : "gongyuyang-alt"
+  huggingface      : "yuyangGong" # Hugging Face username
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 

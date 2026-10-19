@@ -1,0 +1,434 @@
+/* ==========================================================================
+   HOMEPAGE
+   Compact academic layout: profile sidebar on the left, single-column
+   sections on the right, publications shown as "paper boxes" with a key
+   figure taken from each paper. Layout modelled on AcadHomepage
+   (https://github.com/RayeRen/acad-homepage.github.io).
+   Change the colours below to re-theme the whole site.
+   ========================================================================== */
+
+$hp-accent        : #1f4e79;                  // headings, links, badges
+$hp-accent-soft   : rgba(31, 78, 121, 0.3);   // heading underline
+$hp-hover         : #b03a2e;                  // link hover
+$hp-heading       : #222;
+$hp-text          : #3a3f44;
+$hp-muted         : #6b7280;
+$hp-border        : #e5e7eb;
+$hp-thumb-width   : 250px;                    // paper key-figure width on desktop
+$hp-anchor-offset : 90px;                     // keeps section titles below the fixed masthead
+
+/*
+   Base typography
+   ========================================================================== */
+
+html { font-size: 15px; }
+@include breakpoint($medium) { html { font-size: 16px; } }
+
+body {
+  color: $hp-text;
+  line-height: 1.6;
+  padding-bottom: 6em;
+}
+
+a { color: $hp-accent; }
+a:hover,
+a:active { color: $hp-hover; }
+
+/*
+   Masthead
+   ========================================================================== */
+
+.masthead__inner-wrap { padding: 0.75em 1em; }
+.masthead__menu-item--lg a { color: $hp-heading; }
+.greedy-nav a { color: $hp-accent; }
+.greedy-nav a:hover { color: $hp-hover; }
+.greedy-nav .visible-links a:before { display: none; }
+
+/*
+   Sidebar / profile
+   ========================================================================== */
+
+.sidebar .author__name {
+  margin: 0.5em 0 0.25em;
+  color: $hp-heading;
+  font-size: 1.35em;
+  font-weight: 700;
+}
+
+.sidebar .author__bio {
+  margin: 0 0 0.75em;
+  color: $hp-muted;
+  font-size: 0.95em;
+  line-height: 1.4;
+}
+
+.author__avatar img {
+  max-width: 180px;
+  padding: 4px;
+  border: 1px solid $hp-border;
+  border-radius: 50%;
+}
+
+/* one size, one rhythm for every sidebar line (affiliation, location, links) */
+.sidebar .author__urls {
+  li,
+  a {
+    font-size: 0.9em;
+    line-height: 1.5;
+  }
+
+  li {
+    margin: 0 0 0.3em;
+    padding-left: 1.6em;      // hanging indent: wrapped lines align under the text, not the icon
+    text-indent: -1.6em;
+    white-space: normal;
+  }
+
+  li.author__meta { color: $hp-muted; }
+
+  a {
+    display: block;
+    margin: 0;
+    padding: 0;
+    color: $hp-accent;
+
+    &:hover {
+      color: $hp-hover;
+      text-decoration: none;
+    }
+  }
+
+  i,
+  .hf-icon {
+    display: inline-block;
+    width: 1.3em;
+    margin-right: 0.3em;
+    text-align: center;
+    text-indent: 0;           // the li's negative indent must not reach into the icon box
+    font-style: normal;
+  }
+
+  .hf-icon { font-size: 0.95em; }
+}
+
+.author__urls_sm .hf-icon { font-style: normal; }
+
+/* icon-only link row shown on small screens instead of the link list */
+.author__urls_sm {
+  display: block;
+  padding: 0.25em 0;
+  font-size: 1.5em;
+
+  a {
+    margin-right: 0.35em;
+    color: $hp-accent;
+    text-decoration: none;
+
+    &:hover { color: $hp-hover; }
+  }
+
+  @include breakpoint($large) { display: none; }
+}
+
+@media screen and (max-width: 924px) {
+  .author__avatar { width: 96px; }
+  .author__avatar img { max-width: 96px; }
+  .author__content { vertical-align: middle; }
+}
+
+@include breakpoint($large) {
+  .page { padding-right: 0; }   // use the whole column instead of the theme's wide right gutter
+}
+
+/*
+   Section headings and prose
+   ========================================================================== */
+
+.anchor { scroll-margin-top: $hp-anchor-offset; }
+
+.page__content {
+  h2 {
+    position: relative;
+    margin: 1.8em 0 0.9em;
+    padding-bottom: 0.3em;
+    color: $hp-accent;
+    font-size: 1.4em;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    border-bottom: 1px solid $hp-accent-soft;
+    scroll-margin-top: $hp-anchor-offset;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 50px;
+      height: 3px;
+      background: $hp-accent;
+    }
+  }
+
+  h3 {
+    margin: 1.6em 0 0.6em;
+    color: $hp-heading;
+    font-size: 1.1em;
+    font-weight: 700;
+  }
+
+  p { margin: 0 0 0.9em; }
+  ul { margin-bottom: 1em; }
+  li { margin-bottom: 0.35em; }
+
+  a { text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* research interests */
+  .hp-interests {
+    list-style: none;
+    padding-left: 0;
+
+    li {
+      position: relative;
+      padding-left: 1.1em;
+      margin-bottom: 0.5em;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0.6em;
+        width: 0.45em;
+        height: 0.45em;
+        border-radius: 50%;
+        background: $hp-accent;
+      }
+    }
+
+    strong { color: $hp-heading; }
+  }
+
+  /*
+     Paper boxes (selected publications with a key figure)
+     ----------------------------------------------------------------------- */
+
+  .paper-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 1.4em 0;
+    border-bottom: 1px solid $hp-border;
+
+    &:last-of-type { border-bottom: 0; }
+  }
+
+  .paper-box-image {
+    position: relative;
+    order: 2;                 // phones: text first, figure below
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    margin-bottom: 0.5em;
+    overflow: hidden;
+    border: 1px solid $hp-border;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 4px;
+      object-fit: contain;
+      object-position: center;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover img { transform: scale(1.03); }
+  }
+
+  .badge {
+    position: absolute;
+    top: 0.6em;
+    left: -0.3em;
+    z-index: 2;
+    padding: 0.15em 0.8em;
+    color: #fff;
+    background: $hp-accent;
+    font-size: 0.78em;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  }
+
+  .paper-box-text {
+    order: 1;
+    flex: 1 1 100%;           // phones: full width on its own row (a 0 basis would never wrap)
+    min-width: 0;
+    margin-bottom: 0.8em;
+  }
+
+  .paper-title {
+    margin: 0 0 0.35em;
+    font-size: 1.05em;
+    font-weight: 700;
+    line-height: 1.35;
+
+    a { color: $hp-heading; }
+    a:hover { color: $hp-accent; }
+  }
+
+  .paper-authors {
+    margin: 0 0 0.3em;
+    strong { color: $hp-heading; }
+  }
+
+  .paper-venue {
+    margin: 0 0 0.4em;
+    color: $hp-muted;
+  }
+
+  .paper-status {
+    color: $hp-hover;
+    font-weight: 600;
+  }
+
+  .paper-links {
+    margin: 0;
+    font-size: 0.95em;
+    a { font-weight: 600; }
+  }
+
+  .paper-note {
+    margin: 0.3em 0 0;
+    color: $hp-muted;
+    font-size: 0.9em;
+  }
+
+  .paper-footnote {
+    margin-top: 0.5em;
+    color: $hp-muted;
+    font-size: 0.85em;
+  }
+
+  @include breakpoint($medium) {
+    .paper-box-image {
+      order: 1;               // wider screens: figure left, text right
+      width: $hp-thumb-width;
+      min-width: $hp-thumb-width;
+      margin-bottom: 0;
+    }
+
+    .paper-box-text {
+      order: 2;
+      flex: 1 1 0;
+      margin-bottom: 0;
+      padding-left: 1.6em;
+    }
+  }
+
+  /*
+     Compact list (other publications)
+     ----------------------------------------------------------------------- */
+
+  .pub-list {
+    list-style: none;
+    margin: 0 0 1em;
+    padding: 0;
+
+    li {
+      margin: 0;
+      padding: 0.7em 0;
+      border-bottom: 1px dashed $hp-border;
+      line-height: 1.5;
+
+      &:last-child { border-bottom: 0; }
+    }
+
+    .paper-title {
+      display: inline;
+      font-size: 1em;
+    }
+
+    .paper-authors,
+    .paper-venue {
+      display: block;
+      margin: 0;
+    }
+  }
+
+  .pub-badge {
+    display: inline-block;
+    margin-left: 0.4em;
+    padding: 0 0.5em;
+    color: $hp-accent;
+    font-size: 0.75em;
+    font-weight: 600;
+    border: 1px solid $hp-accent-soft;
+    border-radius: 3px;
+    vertical-align: middle;
+  }
+
+  /*
+     Education
+     ----------------------------------------------------------------------- */
+
+  .edu-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .edu-item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 1.5em;
+    margin: 0;
+    padding: 0.5em 0;
+  }
+
+  .edu-date {
+    flex: 0 0 9em;
+    color: $hp-muted;
+    font-weight: 600;
+  }
+
+  .edu-body {
+    flex: 1;
+    min-width: 14em;
+
+    strong { color: $hp-heading; }
+  }
+
+  .edu-sub {
+    display: block;
+    color: $hp-muted;
+    font-size: 0.92em;
+  }
+}
+
+/*
+   Footer
+   ========================================================================== */
+
+.page__footer {
+  background: #fff;
+  border-top: 1px solid $hp-border;
+  color: $hp-muted;
+
+  footer {
+    margin-top: 1em;
+    padding-bottom: 1.2em;
+  }
+}
+
+.page__footer-copyright { font-size: 0.8em; }

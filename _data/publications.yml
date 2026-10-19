@@ -1,60 +1,114 @@
-# Add new papers at the top. Set selected: true to show a paper on the homepage.
-# Use an empty string for links that are not available yet.
+# Publications shown on the homepage. Add new papers at the top.
+#
+#   selected: true   -> shown under "Publications" as a paper box with a key figure
+#   selected: false  -> listed compactly under "Other Publications"
+#   image            -> file name inside images/papers/ (a key figure taken from the paper;
+#                       PNG/JPG about 1200px wide, close to 16:9 looks best)
+#   badge            -> short venue label printed on the figure, e.g. "CCS '26", "Preprint"
+#   links            -> list of {label, url}, rendered as "arXiv / Code / DOI"
+#   paper_url        -> where the title links to
+#   to_appear: true  -> adds "(to appear)" after the venue
+#
+# Keep the English name "Yuyang Gong" in `authors`; the site bolds it automatically.
+# Use <sup>&#42;</sup> after a name to mark equal contribution.
 
 - title: "LocalAlign: Enabling Generalizable Prompt Injection Defense via Generation of Near-Target Adversarial Examples for Alignment Training"
   short_title: "LocalAlign"
   year: "2026"
   venue: "ACM Conference on Computer and Communications Security (CCS)"
-  status: "Accepted"
+  badge: "CCS '26"
   to_appear: true
   authors: "Yuyang Gong<sup>&#42;</sup>, Zihao Wang<sup>&#42;</sup>, Jiawei Liu, XiaoFeng Wang"
-  equal_contribution: true
   tags: ["Prompt Injection", "Defense", "Alignment"]
   paper_url: "https://arxiv.org/abs/2605.01462"
-  code_url: ""
+  image: "localalign.png"
+  links:
+    - label: "arXiv"
+      url: "https://arxiv.org/abs/2605.01462"
+    - label: "Code"
+      url: "https://github.com/gongyuyang-alt/LocalAlign"
+    - label: "Models (Llama-3.1-8B)"
+      url: "https://huggingface.co/yuyangGong/LocalAlign_llama3.1_8B"
+    - label: "Models (Qwen3-4B)"
+      url: "https://huggingface.co/yuyangGong/LocalAlign_qwen3_4B"
   selected: true
 
 - title: "DiscourseFlip: An Oblique Discourse-Level Opinion Manipulation Attack against Black-box Retrieval-Augmented Generation"
   short_title: "DiscourseFlip"
   year: "2026"
   venue: "arXiv preprint"
-  status: "Preprint"
+  badge: "Preprint"
   authors: "Yuyang Gong<sup>&#42;</sup>, Miaokun Chen<sup>&#42;</sup>, Jiawei Liu, Zhuo Chen, Guoxiu He, Wei Lu, XiaoFeng Wang, Xiaozhong Liu"
-  equal_contribution: true
   tags: ["RAG Security", "Black-box Attack", "Agents"]
   paper_url: "https://arxiv.org/abs/2606.01212"
-  code_url: ""
+  image: "discourseflip.png"
+  links:
+    - label: "arXiv"
+      url: "https://arxiv.org/abs/2606.01212"
+    - label: "Code"
+      url: "https://github.com/LauJames/DiscourseFlip"
   selected: true
 
 - title: "Topic-FlipRAG: Topic-Orientated Adversarial Opinion Manipulation Attacks to Retrieval-Augmented Generation Models"
   short_title: "Topic-FlipRAG"
   year: "2025"
-  venue: "34th USENIX Security Symposium"
-  status: "USENIX Security '25"
+  venue: "34th USENIX Security Symposium (USENIX Security)"
+  badge: "USENIX Sec '25"
   authors: "Yuyang Gong, Zhuo Chen, Jiawei Liu, Miaokun Chen, Fengchang Yu, Wei Lu, XiaoFeng Wang, Xiaozhong Liu"
   tags: ["RAG Security", "Opinion Manipulation", "Adversarial Retrieval"]
   paper_url: "https://www.usenix.org/conference/usenixsecurity25/presentation/gong-yuyang"
-  code_url: ""
+  image: "topicfliprag.png"
+  links:
+    - label: "Paper"
+      url: "https://www.usenix.org/conference/usenixsecurity25/presentation/gong-yuyang"
+    - label: "arXiv"
+      url: "https://arxiv.org/abs/2502.01386"
+    - label: "Code"
+      url: "https://github.com/LauJames/Topic-FlipRAG"
   selected: true
 
 - title: "FlippedRAG: Black-Box Opinion Manipulation Adversarial Attacks to Retrieval-Augmented Generation Models"
   short_title: "FlippedRAG"
   year: "2025"
-  venue: "ACM SIGSAC Conference on Computer and Communications Security"
-  status: "CCS '25"
+  venue: "ACM SIGSAC Conference on Computer and Communications Security (CCS)"
+  badge: "CCS '25"
   authors: "Zhuo Chen, Yuyang Gong, Jiawei Liu, Miaokun Chen, Haotan Liu, Qikai Cheng, Fan Zhang, Wei Lu, Xiaozhong Liu"
   tags: ["RAG Security", "Black-box Attack", "Opinion Manipulation"]
   paper_url: "https://doi.org/10.1145/3719027.3765023"
-  code_url: ""
+  image: "flippedrag.png"
+  links:
+    - label: "DOI"
+      url: "https://doi.org/10.1145/3719027.3765023"
+    - label: "arXiv"
+      url: "https://arxiv.org/abs/2501.02968"
+    - label: "Code"
+      url: "https://github.com/DavidAilesChen/FlippedRAG"
   selected: true
+
+- title: "RobustMask: Certified Robustness against Adversarial Neural Ranking Attack via Randomized Masking"
+  short_title: "RobustMask"
+  year: "2025"
+  venue: "arXiv preprint"
+  badge: "Preprint"
+  authors: "Jiawei Liu, Zhuo Chen, Rui Zhu, Miaokun Chen, Yuyang Gong, Wei Lu, XiaoFeng Wang"
+  tags: ["Adversarial Retrieval", "Certified Robustness"]
+  paper_url: "https://arxiv.org/abs/2512.23307"
+  links:
+    - label: "arXiv"
+      url: "https://arxiv.org/abs/2512.23307"
+    - label: "Code"
+      url: "https://github.com/LauJames/RobustMask"
+  selected: false
 
 - title: "Medical Knowledge-Enhanced ICD Coding Prediction"
   short_title: "Medical Knowledge-Enhanced ICD Coding"
   year: "2026"
   venue: "Expert Systems with Applications, Vol. 321, 132312"
-  status: "Journal Article"
+  badge: "ESWA"
   authors: "Fanfan Zhu, Qinghua Zhao, Yuyang Gong, Jingxin Chen, Long Lu"
   tags: ["Clinical NLP", "Knowledge Enhancement"]
   paper_url: "https://doi.org/10.1016/j.eswa.2026.132312"
-  code_url: ""
+  links:
+    - label: "DOI"
+      url: "https://doi.org/10.1016/j.eswa.2026.132312"
   selected: false

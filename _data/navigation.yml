@@ -1,9 +1,13 @@
-# The following is the order of the links in the header of the website.
-#
-# Changing the order here will adjust the order and you can also add additional
-# links. Removing a link prevents it from showing in the header, but does not
-# prevent it from being included in the site.
+# Links in the top navigation bar, in display order.
+# The homepage is a single page, so the links point to its section anchors.
+# Anchor ids come from the section titles in _pages/about.md ("## Research Interests" -> #research-interests).
 
 main:
-  - title: "Home"
-    url: /
+  - title: "About Me"
+    url: /#about-me
+  - title: "Research"
+    url: /#research-interests
+  - title: "Publications"
+    url: /#publications
+  - title: "Education"
+    url: /#education
