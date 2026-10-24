@@ -22,7 +22,7 @@ Feel free to reach out by [email](mailto:{{ profile.email }}) if you share simil
 <ul class="hp-interests">
 <li><strong>Prompt injection defense and alignment.</strong> Making LLMs robust to instructions hidden in untrusted data, e.g. alignment training with near-target adversarial examples ({% include paper-ref.html name="LocalAlign" %}).</li>
 <li><strong>RAG security and adversarial retrieval.</strong> Black-box opinion manipulation attacks against retrieval-augmented generation ({% include paper-ref.html name="FlippedRAG" %}; {% include paper-ref.html name="Topic-FlipRAG" %}; {% include paper-ref.html name="DiscourseFlip" %}) and the defenses they motivate.</li>
-<li><strong>Red-teaming LLM agents.</strong> Building benchmarks and adversarial environments that stress-test LLM-powered agents against manipulation in open, dynamic information environments (ongoing work).</li>
+<li><strong>Red-teaming LLM agents.</strong> Building benchmarks and adversarial environments that stress-test LLM-powered agents against manipulation in open, dynamic information environments (<a href="https://gongyuyang-alt.github.io/NTBench/">NTBench</a>, ongoing work).</li>
 </ul>
 
 ## Publications
