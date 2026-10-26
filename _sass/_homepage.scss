@@ -271,27 +271,35 @@ a:active { color: $hp-hover; }
   }
 
   .paper-title {
-    margin: 0 0 0.35em;
+    margin: 0 0 0.55em;
     font-size: 1.05em;
-    font-weight: 700;
-    line-height: 1.35;
+    font-weight: 400;
+    line-height: 1.45;
 
-    a { color: $hp-heading; }
-    a:hover { color: $hp-accent; }
+    a {
+      color: $hp-accent;
+      text-decoration: underline;
+      text-underline-offset: 0.15em;
+    }
+    a:hover { color: $hp-hover; }
   }
 
   .paper-authors {
-    margin: 0 0 0.3em;
+    margin: 0 0 0.55em;
     strong { color: $hp-heading; }
   }
 
   .paper-venue {
-    margin: 0 0 0.4em;
+    margin: 0 0 0.55em;
     color: $hp-text;
     strong { color: $hp-heading; }
   }
 
-  .paper-link { font-weight: 600; }
+  .paper-link {
+    font-weight: 400;
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+  }
 
   .paper-rate {
     color: $hp-hover;
@@ -311,9 +319,9 @@ a:active { color: $hp-hover; }
   }
 
   .paper-note {
-    margin: 0.3em 0 0;
-    color: $hp-muted;
-    font-size: 0.9em;
+    margin: 0;
+    color: $hp-text;
+    font-size: 1em;
   }
 
   .paper-footnote {

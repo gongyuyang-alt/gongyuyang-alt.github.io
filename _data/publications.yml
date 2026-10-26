@@ -11,6 +11,7 @@
 #   links            -> list of {label, url}, rendered as "arXiv / Code / DOI"
 #   paper_url        -> where the title links to
 #   to_appear: true  -> adds "(to appear)" after the venue
+#   note             -> one-sentence description shown under the venue line
 #
 # Keep the English name "Yuyang Gong" in `authors`; the site bolds it automatically.
 # Use <sup>&#42;</sup> after a name to mark equal contribution.
@@ -30,6 +31,7 @@
       url: "https://arxiv.org/abs/2610.32531"
     - label: "Project page"
       url: "https://gongyuyang-alt.github.io/NTBench/"
+  note: "NTBench benchmarks near-target prompt injection: attacks whose target responses or tool calls resemble the legitimate answer but make it incorrect or harmful. Across seven LLMs on language and agentic tasks, such near targets succeed far more often than the fixed targets used in existing benchmarks."
   selected: true
 
 - title: "LocalAlign: Enabling Generalizable Prompt Injection Defense via Generation of Near-Target Adversarial Examples for Alignment Training"
@@ -53,6 +55,7 @@
       url: "https://huggingface.co/yuyangGong/LocalAlign_llama3.1_8B"
     - label: "Models (Qwen3-4B)"
       url: "https://huggingface.co/yuyangGong/LocalAlign_qwen3_4B"
+  note: "LocalAlign is an adversarial-training-style prompt injection defense. It automatically generates near-but-wrong adversarial examples and aligns the model with a margin-aware objective, enforcing a tight robustness boundary around the correct response and generalizing to unseen attacks that prior defenses miss."
   selected: true
 
 - title: "DiscourseFlip: An Oblique Discourse-Level Opinion Manipulation Attack against Black-box Retrieval-Augmented Generation"
@@ -70,6 +73,7 @@
       url: "https://arxiv.org/abs/2606.01212"
     - label: "Code"
       url: "https://github.com/LauJames/DiscourseFlip"
+  note: "DiscourseFlip introduces discourse-level opinion manipulation against black-box RAG: an agentic, graph-guided attack that allocates a limited poisoning budget across a semantic query network to shift opinions over a whole multi-topic query space while staying well camouflaged."
   selected: true
 
 - title: "Topic-FlipRAG: Topic-Orientated Adversarial Opinion Manipulation Attacks to Retrieval-Augmented Generation Models"
@@ -91,6 +95,7 @@
       url: "https://arxiv.org/abs/2502.01386"
     - label: "Code"
       url: "https://github.com/LauJames/Topic-FlipRAG"
+  note: "Topic-FlipRAG is a two-stage knowledge poisoning attack that shifts the opinion polarity of RAG outputs across all queries on a topic, combining adversarial ranking perturbations with LLM-crafted semantic-level perturbations."
   selected: true
 
 - title: "FlippedRAG: Black-Box Opinion Manipulation Adversarial Attacks to Retrieval-Augmented Generation Models"
@@ -112,6 +117,7 @@
       url: "https://arxiv.org/abs/2501.02968"
     - label: "Code"
       url: "https://github.com/DavidAilesChen/FlippedRAG"
+  note: "FlippedRAG is a transfer-based opinion manipulation attack on black-box RAG: it reverse-engineers the retriever into a surrogate, then crafts poisoning triggers that alter very few documents to flip the opinion polarity of generated responses on controversial topics."
   selected: true
 
 - title: "RobustMask: Certified Robustness against Adversarial Neural Ranking Attack via Randomized Masking"
