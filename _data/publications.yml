@@ -12,6 +12,22 @@
 # Keep the English name "Yuyang Gong" in `authors`; the site bolds it automatically.
 # Use <sup>&#42;</sup> after a name to mark equal contribution.
 
+- title: "On Task, Off Track: Benchmarking LLM and Agent Robustness to Near-Target Prompt Injection"
+  short_title: "NTBench"
+  year: "2026"
+  venue: "arXiv preprint"
+  badge: "Preprint"
+  authors: "Yuyang Gong<sup>&#42;</sup>, Zihao Wang<sup>&#42;</sup>, Jiawei Liu, XiaoFeng Wang"
+  tags: ["Prompt Injection", "Benchmark", "Agents"]
+  paper_url: "https://arxiv.org/abs/2610.32531"
+  image: "ntbench.png"
+  links:
+    - label: "arXiv"
+      url: "https://arxiv.org/abs/2610.32531"
+    - label: "Project page"
+      url: "https://gongyuyang-alt.github.io/NTBench/"
+  selected: true
+
 - title: "LocalAlign: Enabling Generalizable Prompt Injection Defense via Generation of Near-Target Adversarial Examples for Alignment Training"
   short_title: "LocalAlign"
   year: "2026"
