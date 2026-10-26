@@ -25,7 +25,7 @@
   authors: "Yuyang Gong<sup>&#42;</sup>, Zihao Wang<sup>&#42;</sup>, Jiawei Liu, XiaoFeng Wang"
   tags: ["Prompt Injection", "Benchmark", "Agents"]
   paper_url: "https://arxiv.org/abs/2610.32531"
-  image: "ntbench.png"
+  image: "ntbench_asr.png"
   links:
     - label: "arXiv"
       url: "https://arxiv.org/abs/2610.32531"
@@ -45,7 +45,7 @@
   authors: "Yuyang Gong<sup>&#42;</sup>, Zihao Wang<sup>&#42;</sup>, Jiawei Liu, XiaoFeng Wang"
   tags: ["Prompt Injection", "Defense", "Alignment"]
   paper_url: "https://arxiv.org/abs/2605.01462"
-  image: "localalign.png"
+  image: "localalign_intro.png"
   links:
     - label: "Paper"
       url: "https://arxiv.org/abs/2605.01462"
@@ -109,7 +109,7 @@
   authors: "Zhuo Chen, Yuyang Gong, Jiawei Liu, Miaokun Chen, Haotan Liu, Qikai Cheng, Fan Zhang, Wei Lu, Xiaozhong Liu"
   tags: ["RAG Security", "Black-box Attack", "Opinion Manipulation"]
   paper_url: "https://doi.org/10.1145/3719027.3765023"
-  image: "flippedrag.png"
+  image: "flippedrag_method.png"
   links:
     - label: "DOI"
       url: "https://doi.org/10.1145/3719027.3765023"
