@@ -5,8 +5,7 @@
 <div class="paper-box-text">
 <p class="paper-title"><a href="{{ paper.paper_url }}">{{ paper.title }}</a></p>
 <p class="paper-authors">{{ paper.authors | replace: 'Yuyang Gong', '<strong>Yuyang Gong</strong>' }}</p>
-<p class="paper-venue">{{ paper.venue }}{% if paper.year %}, {{ paper.year }}{% endif %}{% if paper.to_appear %} <span class="paper-status">(to appear)</span>{% endif %}</p>
-{% if paper.links and paper.links.size > 0 %}<p class="paper-links">{% for link in paper.links %}{% unless forloop.first %} / {% endunless %}<a href="{{ link.url }}">{{ link.label }}</a>{% endfor %}</p>{% endif %}
+<p class="paper-venue"><strong>{{ paper.venue_short | default: paper.venue }}</strong>{% if paper.rank %} ({{ paper.rank }}){% endif %}{% if paper.to_appear %} <span class="paper-status">(to appear)</span>{% endif %}{% for link in paper.links %} <a class="paper-link" href="{{ link.url }}">[{{ link.label }}]</a>{% endfor %}{% if paper.acceptance %} <span class="paper-rate">Acceptance rate: {{ paper.acceptance }}</span>{% endif %}</p>
 {% if paper.note %}<p class="paper-note">{{ paper.note }}</p>{% endif %}
 </div>
 </div>

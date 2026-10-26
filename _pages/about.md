@@ -29,7 +29,7 @@ Feel free to reach out by [email](mailto:{{ profile.email }}) if you share simil
 
 {% for paper in site.data.publications %}{% if paper.selected %}{% include paper-box.html paper=paper %}{% endif %}{% endfor %}
 
-<p class="paper-footnote"><sup>&#42;</sup> Equal contribution. See <a href="{{ site.author.googlescholar }}">Google Scholar</a> for the full list and citation counts.</p>
+<p class="paper-footnote"><sup>&#42;</sup> Equal contribution. Big4 = the four top-tier security conferences (IEEE S&amp;P, ACM CCS, USENIX Security, NDSS). See <a href="{{ site.author.googlescholar }}">Google Scholar</a> for the full list and citation counts.</p>
 
 ### Other Publications
 

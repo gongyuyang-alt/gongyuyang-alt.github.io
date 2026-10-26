@@ -5,6 +5,9 @@
 #   image            -> file name inside images/papers/ (a key figure taken from the paper;
 #                       PNG/JPG about 1200px wide, close to 16:9 looks best)
 #   badge            -> short venue label printed on the figure, e.g. "CCS '26", "Preprint"
+#   venue_short      -> bold venue name in the paper box, e.g. "ACM CCS 2025" (falls back to venue)
+#   rank             -> printed after the venue in brackets, e.g. "CCF-A, Big4"
+#   acceptance       -> acceptance rate shown in red, e.g. "14.5%" (cite the year's own statistics)
 #   links            -> list of {label, url}, rendered as "arXiv / Code / DOI"
 #   paper_url        -> where the title links to
 #   to_appear: true  -> adds "(to appear)" after the venue
@@ -17,6 +20,7 @@
   year: "2026"
   venue: "arXiv preprint"
   badge: "Preprint"
+  venue_short: "arXiv preprint, 2026"
   authors: "Yuyang Gong<sup>&#42;</sup>, Zihao Wang<sup>&#42;</sup>, Jiawei Liu, XiaoFeng Wang"
   tags: ["Prompt Injection", "Benchmark", "Agents"]
   paper_url: "https://arxiv.org/abs/2610.32531"
@@ -33,6 +37,9 @@
   year: "2026"
   venue: "ACM Conference on Computer and Communications Security (CCS)"
   badge: "CCS '26"
+  venue_short: "ACM CCS 2026"
+  rank: "CCF-A, Big4"
+  acceptance: "15.8%"
   authors: "Yuyang Gong<sup>&#42;</sup>, Zihao Wang<sup>&#42;</sup>, Jiawei Liu, XiaoFeng Wang"
   tags: ["Prompt Injection", "Defense", "Alignment"]
   paper_url: "https://arxiv.org/abs/2605.01462"
@@ -53,6 +60,7 @@
   year: "2026"
   venue: "arXiv preprint"
   badge: "Preprint"
+  venue_short: "arXiv preprint, 2026"
   authors: "Yuyang Gong<sup>&#42;</sup>, Miaokun Chen<sup>&#42;</sup>, Jiawei Liu, Zhuo Chen, Guoxiu He, Wei Lu, XiaoFeng Wang, Xiaozhong Liu"
   tags: ["RAG Security", "Black-box Attack", "Agents"]
   paper_url: "https://arxiv.org/abs/2606.01212"
@@ -69,6 +77,9 @@
   year: "2025"
   venue: "34th USENIX Security Symposium (USENIX Security)"
   badge: "USENIX Sec '25"
+  venue_short: "USENIX Security 2025"
+  rank: "CCF-A, Big4"
+  acceptance: "17.1%"
   authors: "Yuyang Gong, Zhuo Chen, Jiawei Liu, Miaokun Chen, Fengchang Yu, Wei Lu, XiaoFeng Wang, Xiaozhong Liu"
   tags: ["RAG Security", "Opinion Manipulation", "Adversarial Retrieval"]
   paper_url: "https://www.usenix.org/conference/usenixsecurity25/presentation/gong-yuyang"
@@ -87,6 +98,9 @@
   year: "2025"
   venue: "ACM SIGSAC Conference on Computer and Communications Security (CCS)"
   badge: "CCS '25"
+  venue_short: "ACM CCS 2025"
+  rank: "CCF-A, Big4"
+  acceptance: "14.5%"
   authors: "Zhuo Chen, Yuyang Gong, Jiawei Liu, Miaokun Chen, Haotan Liu, Qikai Cheng, Fan Zhang, Wei Lu, Xiaozhong Liu"
   tags: ["RAG Security", "Black-box Attack", "Opinion Manipulation"]
   paper_url: "https://doi.org/10.1145/3719027.3765023"

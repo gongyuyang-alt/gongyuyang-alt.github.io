@@ -14,7 +14,8 @@ $hp-heading       : #222;
 $hp-text          : #3a3f44;
 $hp-muted         : #6b7280;
 $hp-border        : #e5e7eb;
-$hp-thumb-width   : 250px;                    // paper key-figure width on desktop
+$hp-thumb-width   : 40%;                      // paper key-figure width on desktop (share of the row)
+$hp-thumb-max     : 400px;                    // ... but never wider than this
 $hp-anchor-offset : 90px;                     // keeps section titles below the fixed masthead
 
 /*
@@ -215,8 +216,8 @@ a:active { color: $hp-hover; }
   .paper-box {
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-start;
-    padding: 1.4em 0;
+    align-items: center;
+    padding: 1.6em 0;
     border-bottom: 1px solid $hp-border;
 
     &:last-of-type { border-bottom: 0; }
@@ -226,33 +227,25 @@ a:active { color: $hp-hover; }
     position: relative;
     order: 2;                 // phones: text first, figure below
     width: 100%;
-    aspect-ratio: 16 / 9;
-    margin-bottom: 0.5em;
-    overflow: hidden;
-    border: 1px solid $hp-border;
-    border-radius: 6px;
-    background: #fff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    margin-bottom: 0.6em;
 
-    a {
-      display: block;
-      width: 100%;
-      height: 100%;
-    }
+    a { display: block; }
 
     img {
-      position: absolute;
-      top: 0;
-      left: 0;
+      display: block;
       width: 100%;
-      height: 100%;
-      padding: 4px;
-      object-fit: contain;
-      object-position: center;
-      transition: transform 0.3s ease;
+      height: auto;           // natural aspect ratio: the whole figure stays legible
+      border: 1px solid $hp-border;
+      border-radius: 4px;
+      background: #fff;
+      box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.18);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    &:hover img { transform: scale(1.03); }
+    &:hover img {
+      transform: scale(1.02);
+      box-shadow: 2px 4px 14px rgba(0, 0, 0, 0.25);
+    }
   }
 
   .badge {
@@ -294,7 +287,16 @@ a:active { color: $hp-hover; }
 
   .paper-venue {
     margin: 0 0 0.4em;
-    color: $hp-muted;
+    color: $hp-text;
+    strong { color: $hp-heading; }
+  }
+
+  .paper-link { font-weight: 600; }
+
+  .paper-rate {
+    color: $hp-hover;
+    font-weight: 700;
+    white-space: nowrap;
   }
 
   .paper-status {
@@ -323,8 +325,8 @@ a:active { color: $hp-hover; }
   @include breakpoint($medium) {
     .paper-box-image {
       order: 1;               // wider screens: figure left, text right
-      width: $hp-thumb-width;
-      min-width: $hp-thumb-width;
+      flex: 0 0 $hp-thumb-width;
+      max-width: $hp-thumb-max;
       margin-bottom: 0;
     }
 
