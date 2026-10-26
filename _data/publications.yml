@@ -33,13 +33,12 @@
   year: "2026"
   venue: "ACM Conference on Computer and Communications Security (CCS)"
   badge: "CCS '26"
-  to_appear: true
   authors: "Yuyang Gong<sup>&#42;</sup>, Zihao Wang<sup>&#42;</sup>, Jiawei Liu, XiaoFeng Wang"
   tags: ["Prompt Injection", "Defense", "Alignment"]
   paper_url: "https://arxiv.org/abs/2605.01462"
   image: "localalign.png"
   links:
-    - label: "arXiv"
+    - label: "Paper"
       url: "https://arxiv.org/abs/2605.01462"
     - label: "Code"
       url: "https://github.com/gongyuyang-alt/LocalAlign"
